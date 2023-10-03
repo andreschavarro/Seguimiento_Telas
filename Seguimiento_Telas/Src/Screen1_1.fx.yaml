@@ -1,0 +1,283 @@
+Screen1_1 As screen:
+
+    contenedor_Banner_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Regular
+        Height: =70
+        Width: =1366
+        ZIndex: =1
+
+        Rectangle1_1 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =70
+            Width: =1366
+            ZIndex: =1
+
+        Label1_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Size: =20
+            Text: ="Seguimiento Telas"
+            Width: =313
+            X: =23
+            Y: =15
+            ZIndex: =2
+
+    ContainerFiltros_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =143
+        Width: =1366
+        Y: =70
+        ZIndex: =2
+
+        ComboBox2_1 As combobox:
+            Items: =ComboBoxSample
+            SearchItems: =Search(ComboBoxSample,ComboBox2_1.SearchText,"Value1")
+            Width: =314
+            X: =15
+            Y: =67
+            ZIndex: =1
+
+        ComboBox3_1 As combobox:
+            Items: =ComboBoxSample
+            SearchItems: =Search(ComboBoxSample,ComboBox3_1.SearchText,"Value1")
+            Width: =314
+            X: =347
+            Y: =67
+            ZIndex: =2
+
+        ComboBox4_1 As combobox:
+            Items: =ComboBoxSample
+            SearchItems: =Search(ComboBoxSample,ComboBox4_1.SearchText,"Value1")
+            Width: =309
+            X: =683
+            Y: =67
+            ZIndex: =3
+
+        ComboBox5_1 As combobox:
+            Items: =ComboBoxSample
+            SearchItems: =Search(ComboBoxSample,ComboBox5_1.SearchText,"Value1")
+            Width: =318
+            X: =1020
+            Y: =67
+            ZIndex: =4
+
+        Label2_1 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =14
+            Text: ="Centro"
+            X: =15
+            Y: =27
+            ZIndex: =5
+
+        Label3_1 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =14
+            Text: ="Codigo Referencia"
+            Width: =221
+            X: =1020
+            Y: =27
+            ZIndex: =6
+
+        Label4_1 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =14
+            Text: ="Tanda Tela"
+            X: =684
+            Y: =27
+            ZIndex: =7
+
+        Label5_1 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =14
+            Text: ="Grupo"
+            X: =349
+            Y: =27
+            ZIndex: =8
+
+    Container5 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =537
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =1366
+        Y: =231
+        ZIndex: =3
+
+        Label12 As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            Text: ="Critica"
+            ZIndex: =1
+
+        Gallery2 As gallery.galleryVertical:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderThickness: =1
+            DelayItemLoading: =true
+            Items: =CustomGallerySample
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =200
+            LayoutMinWidth: =900
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =
+            Width: =1500
+            ZIndex: =1
+
+        Label12_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Centro"
+            ZIndex: =2
+
+        Label12_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Tipo de Orden"
+            ZIndex: =3
+
+        Label12_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Referencia"
+            ZIndex: =4
+
+        Label12_4 As label:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Dias Armado"
+            ZIndex: =5
+
+        Label12_5 As label:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Días Centro"
+            ZIndex: =6
+
+        Label12_6 As label:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Días Ubicacíon"
+            ZIndex: =7
+
+        Label12_7 As label:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Grupo"
+            ZIndex: =8
+
+        Label12_8 As label:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="OP"
+            ZIndex: =9
+
+        Label12_9 As label:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Tanda"
+            ZIndex: =10
+
+        Label12_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Color"
+            ZIndex: =11
+
+        Label12_11 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Descripcíon Tela"
+            ZIndex: =12
+
+        Label12_12 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Ubicaíon"
+            ZIndex: =13
+
+        Label12_13 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            FillPortions: =1
+            LayoutMinWidth: =190
+            Text: ="Maq Tintoreria"
+            ZIndex: =14
+
+        Label12_14 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Prio Maq"
+            ZIndex: =15
+
+        Label12_15 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Tanda Tela"
+            ZIndex: =16
+
+        Label12_16 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Obs Maq Tintireria"
+            Width: =190
+            ZIndex: =17
+
+        Label12_17 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Co Linea"
+            ZIndex: =18
+
+        Label12_18 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Pedido"
+            ZIndex: =19
+
+        Label12_19 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Co Referencia"
+            ZIndex: =20
+
+        Label12_20 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Reposo Corte"
+            ZIndex: =21
+
+        Label12_21 As label:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="T Pieza"
+            ZIndex: =22
+
+        Label12_22 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="ToTal"
+            ZIndex: =23
+
+        Label12_23 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Text: ="Observaciones"
+            ZIndex: =24
+

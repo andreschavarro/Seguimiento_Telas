@@ -1,1 +1,24 @@
-{}
+{
+  "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3432/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://grupocrystal.sharepoint.com/sites/Pruebas_IN": {
+        "dataSources": {
+          "seg_Telas_DEV": {
+            "tableName": "791f71b8-c412-4696-8891-28f19bd985a1"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "seg_Telas_DEV"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "4099b8b1-3b3b-47c3-9c41-3a0d28791b13"
+  }
+}

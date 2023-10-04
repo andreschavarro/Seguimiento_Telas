@@ -300,7 +300,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.critica
                 Width: =140
                 ZIndex: =7
@@ -309,6 +309,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
+                Size: =12
                 Text: =ThisItem.Centro
                 Width: =69
                 X: =140
@@ -336,6 +337,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
+                Size: =12
                 Text: =ThisItem.Dias_Armado
                 Width: =70
                 X: =462
@@ -345,6 +347,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
+                Size: =12
                 Text: =ThisItem.Dias_centro
                 Width: =67
                 X: =532
@@ -354,6 +357,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
+                Size: =12
                 Text: =ThisItem.Dias_Ubicacion
                 Width: =90
                 X: =599
@@ -405,7 +409,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Color
                 Width: =70
                 X: =889
@@ -415,7 +419,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Tanda
                 Width: =66
                 X: =823
@@ -435,7 +439,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Ubicacion
                 Width: =108
                 X: =1141
@@ -445,7 +449,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Obs_Maq_Tintoreria
                 Width: =98
                 X: =1466
@@ -465,7 +469,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Prio_Maq
                 Width: =55
                 X: =1342
@@ -475,7 +479,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Maq_Tintoreria
                 Width: =93
                 X: =1249
@@ -485,7 +489,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.T_Pieza
                 Width: =51
                 X: =1820
@@ -495,7 +499,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Reposo_Corte
                 Width: =68
                 X: =1752
@@ -505,7 +509,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Co_Referencia
                 Width: =68
                 X: =1684
@@ -515,7 +519,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Pedido
                 Width: =64
                 X: =1620
@@ -525,7 +529,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.co_linea
                 Width: =56
                 X: =1564
@@ -535,7 +539,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Size: =10
+                Size: =12
                 Text: =ThisItem.Total
                 Width: =71
                 X: =1872

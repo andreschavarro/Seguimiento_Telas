@@ -1,16 +1,17 @@
 Screen1 As screen:
-    Width: =2500
+    Width: |
+        =2230
 
     contenedor_Banner As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Regular
         Height: =70
-        Width: =2500
+        Width: =2230
         ZIndex: =1
 
         Rectangle1 As rectangle:
             Fill: =RGBA(0, 0, 0, 1)
             Height: =70
-            Width: =2500
+            Width: =2230
             ZIndex: =1
 
         Label1 As label:
@@ -27,27 +28,45 @@ Screen1 As screen:
     ContainerFiltros As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Semibold
         Height: =143
-        Width: =2500
+        Width: =2230
         Y: =70
         ZIndex: =2
 
         ComboBoxCentro As combobox:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
+            DisplayFields: =["Value"]
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =RGBA(56, 96, 178, 1)
+            HoverFill: =RGBA(237, 237, 237, 1)
             IsSearchable: =false
             Items: =Distinct(seg_Telas_DEV, Centro)
+            SearchFields: =["Value"]
             SearchItems: =[]
             SelectMultiple: =false
-            Width: =314
-            X: =349
-            Y: =67
+            Width: =299
+            X: =410
+            Y: =64
             ZIndex: =1
 
         ComboBoxReferencia As combobox:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 0, 0, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(0, 0, 0, 1)
             DisplayFields: =["Value"]
+            HoverBorderColor: =RGBA(56, 96, 178, 1)
+            HoverFill: =RGBA(219, 219, 219, 1)
+            InputTextPlaceholder: ="Buscar Elementos"
             Items: =Distinct(seg_Telas_DEV, referencia)
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(seg_Telas_DEV, referencia),ComboBoxReferencia.SearchText,"Value")
-            Width: =318
-            X: =1396
+            Width: =299
+            X: =1517
             Y: =67
             ZIndex: =4
 
@@ -55,24 +74,24 @@ Screen1 As screen:
             FontWeight: =FontWeight.Bold
             Size: =14
             Text: ="Centro"
-            X: =349
+            X: =399
             Y: =27
             ZIndex: =5
 
         Label3 As label:
             FontWeight: =FontWeight.Bold
             Size: =14
-            Text: ="Codigo Referencia"
+            Text: ="Referencia"
             Width: =221
-            X: =1020
+            X: =1517
             Y: =27
             ZIndex: =6
 
         Label4 As label:
             FontWeight: =FontWeight.Bold
             Size: =14
-            Text: ="Tanda Tela"
-            X: =684
+            Text: ="Ubicacíon"
+            X: =772
             Y: =27
             ZIndex: =7
 
@@ -91,7 +110,7 @@ Screen1 As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Tanda Tela"
+            InputTextPlaceholder: ="Buscar Elemento"
             Items: =Distinct(seg_Telas_DEV,Tanda)
             OnChange: =Set(Var_TandaTela,ComboBoxTanda.Selected.Value)
             OnSelect: =Set(Var_TandaTela,ComboBoxTanda.Selected.Value)
@@ -101,9 +120,9 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV,Tanda),ComboBoxTanda.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
-            Width: =276
-            X: =1045
-            Y: =80
+            Width: =299
+            X: =1131
+            Y: =67
             ZIndex: =9
 
         ComboBoxPrio_Maq As combobox:
@@ -121,7 +140,7 @@ Screen1 As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Tanda Tela"
+            InputTextPlaceholder: ="Buscar Elemento"
             Items: =Distinct(seg_Telas_DEV, Prio_Maq)
             OnChange: =Set(Var_TandaTela,ComboBoxPrio_Maq.Selected.Value)
             OnSelect: =Set(Var_TandaTela,ComboBoxPrio_Maq.Selected.Value)
@@ -131,8 +150,8 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV, Prio_Maq),ComboBoxPrio_Maq.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
-            Width: =276
-            X: =1806
+            Width: =299
+            X: =1890
             Y: =67
             ZIndex: =10
 
@@ -151,7 +170,7 @@ Screen1 As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Tanda Tela"
+            InputTextPlaceholder: ="Buscar Elemento"
             Items: =Distinct(seg_Telas_DEV,critica)
             OnChange: =Set(Var_TandaTela,ComboBoxCritica.Selected.Value)
             OnSelect: =Set(Var_TandaTela,ComboBoxCritica.Selected.Value)
@@ -161,7 +180,7 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV,critica),ComboBoxCritica.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
-            Width: =276
+            Width: =299
             X: =27
             Y: =67
             ZIndex: =11
@@ -181,7 +200,7 @@ Screen1 As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Tanda Tela"
+            InputTextPlaceholder: ="Buscar Elemento"
             Items: =Distinct(seg_Telas_DEV, Ubicacion)
             OnChange: =Set(Var_TandaTela,ComboBoxUbicacion.Selected.Value)
             OnSelect: =Set(Var_TandaTela,ComboBoxUbicacion.Selected.Value)
@@ -191,20 +210,46 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV, Ubicacion),ComboBoxUbicacion.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
-            Width: =276
-            X: =727
+            Width: =299
+            X: =772
             Y: =67
             ZIndex: =12
 
+        Label2_2 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =14
+            Text: ="Critica"
+            X: =27
+            Y: =27
+            ZIndex: =13
+
+        Label3_2 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =14
+            Text: ="Prioridad Maquina"
+            Width: =221
+            X: =1890
+            Y: =24
+            ZIndex: =14
+
+        Label3_3 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =14
+            Text: ="Tanda"
+            Width: =221
+            X: =1131
+            Y: =24
+            ZIndex: =15
+
     ContainerGallery As groupContainer.manualLayoutContainer:
         Height: =538
-        Width: =2500
+        Width: =2225
         Y: =228
         ZIndex: =3
 
         "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             DelayItemLoading: =true
-            Height: =491
+            Height: =475
             Items: |+
                 =Filter(
                     seg_Telas_DEV,
@@ -232,7 +277,7 @@ Screen1 As screen:
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =86
-            Width: =2479
+            Width: =2225
             Y: =63
             ZIndex: =1
 
@@ -251,6 +296,7 @@ Screen1 As screen:
                 ZIndex: =6
 
             Label6 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -277,6 +323,7 @@ Screen1 As screen:
                 ZIndex: =9
 
             Label6_3 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.referencia
@@ -312,9 +359,13 @@ Screen1 As screen:
                 ZIndex: =13
 
             TextInput1 As text:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
                 Default: =LookUp(seg_Telas_DEV, TandaTela = ThisItem.TandaTela).observaciones
                 Height: =57
                 HintText: ="Ingrese su Observacion"
+                HoverBorderColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(237, 237, 237, 1)
                 OnChange: |-
                     =Patch(
                         seg_Telas_DEV,
@@ -325,8 +376,8 @@ Screen1 As screen:
                         {observaciones: TextInput1.Text}
                     )
                 OnSelect: =Select(Parent)
-                Width: =248
-                X: =1937
+                Width: =255
+                X: =1943
                 Y: =6
                 ZIndex: =14
 
@@ -380,6 +431,7 @@ Screen1 As screen:
                 ZIndex: =19
 
             Label6_12 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -389,6 +441,7 @@ Screen1 As screen:
                 ZIndex: =20
 
             Label6_13 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -398,6 +451,7 @@ Screen1 As screen:
                 ZIndex: =21
 
             Label6_14 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -407,6 +461,7 @@ Screen1 As screen:
                 ZIndex: =22
 
             Label6_15 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -416,6 +471,7 @@ Screen1 As screen:
                 ZIndex: =23
 
             Label6_16 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -425,6 +481,7 @@ Screen1 As screen:
                 ZIndex: =24
 
             Label6_17 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -434,6 +491,7 @@ Screen1 As screen:
                 ZIndex: =25
 
             Label6_18 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -443,6 +501,7 @@ Screen1 As screen:
                 ZIndex: =26
 
             Label6_19 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -452,6 +511,7 @@ Screen1 As screen:
                 ZIndex: =27
 
             Label6_20 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -461,6 +521,7 @@ Screen1 As screen:
                 ZIndex: =28
 
             Label6_21 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
@@ -470,11 +531,12 @@ Screen1 As screen:
                 ZIndex: =29
 
             Label6_24 As label:
+                Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =10
                 Text: =ThisItem.Total
-                Width: =51
+                Width: =71
                 X: =1872
                 ZIndex: =32
 
@@ -491,6 +553,8 @@ Screen1 As screen:
 
         Label7 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -502,6 +566,8 @@ Screen1 As screen:
 
         Label7_1 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -514,6 +580,8 @@ Screen1 As screen:
 
         Label7_2 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -526,11 +594,14 @@ Screen1 As screen:
 
         Label7_3 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
             Height: =63
             Size: =12
+            TabIndex: =0
             Text: ="Tipo Orden"
             Width: =69
             X: =210
@@ -538,6 +609,8 @@ Screen1 As screen:
 
         Label7_4 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -550,6 +623,8 @@ Screen1 As screen:
 
         Label7_5 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -562,18 +637,22 @@ Screen1 As screen:
 
         Label7_6 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
             Height: =63
             Size: =12
             Text: ="Color"
-            Width: =72
-            X: =888
+            Width: =75
+            X: =885
             ZIndex: =8
 
         Label7_7 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -586,6 +665,8 @@ Screen1 As screen:
 
         Label7_8 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -598,6 +679,8 @@ Screen1 As screen:
 
         Label7_9 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -610,6 +693,8 @@ Screen1 As screen:
 
         Label7_10 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -622,6 +707,8 @@ Screen1 As screen:
 
         Label7_11 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -634,6 +721,8 @@ Screen1 As screen:
 
         Label7_12 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -646,6 +735,8 @@ Screen1 As screen:
 
         Label7_13 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -658,6 +749,8 @@ Screen1 As screen:
 
         Label7_14 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -670,6 +763,8 @@ Screen1 As screen:
 
         Label7_15 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -682,6 +777,8 @@ Screen1 As screen:
 
         Label7_16 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -694,6 +791,8 @@ Screen1 As screen:
 
         Label7_17 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -706,6 +805,8 @@ Screen1 As screen:
 
         Label7_18 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -718,6 +819,8 @@ Screen1 As screen:
 
         Label7_19 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -730,6 +833,8 @@ Screen1 As screen:
 
         Label7_20 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
@@ -742,30 +847,36 @@ Screen1 As screen:
 
         Label7_21 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
             Height: =63
             Size: =12
             Text: ="Observacion"
-            Width: =266
-            X: =1924
+            Width: =260
+            X: =1940
             ZIndex: =23
 
         Label7_22 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold
             Height: =63
             Size: =12
             Text: ="Total"
-            Width: =52
+            Width: =68
             X: =1872
             ZIndex: =24
 
         Label7_23 As label:
             Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =1
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 1)
             FontWeight: =FontWeight.Bold

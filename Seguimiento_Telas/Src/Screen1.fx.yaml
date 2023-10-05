@@ -42,6 +42,7 @@ Screen1 As screen:
             Font: =Font.'Segoe UI'
             HoverBorderColor: =RGBA(56, 96, 178, 1)
             HoverFill: =RGBA(237, 237, 237, 1)
+            InputTextPlaceholder: ="Buscar Centro"
             IsSearchable: =false
             Items: =Distinct(seg_Telas_DEV, Centro)
             SearchFields: =["Value"]
@@ -111,13 +112,13 @@ Screen1 As screen:
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Elemento"
-            Items: =Distinct(seg_Telas_DEV,Tanda)
+            Items: =Distinct(seg_Telas_DEV,TandaTela)
             OnChange: =Set(Var_TandaTela,ComboBoxTanda.Selected.Value)
             OnSelect: =Set(Var_TandaTela,ComboBoxTanda.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
-            SearchItems: =Search(Distinct(seg_Telas_DEV,Tanda),ComboBoxTanda.SearchText,"Value")
+            SearchItems: =Search(Distinct(seg_Telas_DEV,TandaTela),ComboBoxTanda.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             SelectMultiple: =false
             Width: =299
@@ -170,7 +171,7 @@ Screen1 As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Buscar Elemento"
+            InputTextPlaceholder: ="Buscar Critica"
             Items: =Distinct(seg_Telas_DEV,critica)
             OnChange: =Set(Var_TandaTela,ComboBoxCritica.Selected.Value)
             OnSelect: =Set(Var_TandaTela,ComboBoxCritica.Selected.Value)
@@ -200,7 +201,7 @@ Screen1 As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Buscar Elemento"
+            InputTextPlaceholder: ="Buscar Ubicacion"
             Items: =Distinct(seg_Telas_DEV, Ubicacion)
             OnChange: =Set(Var_TandaTela,ComboBoxUbicacion.Selected.Value)
             OnSelect: =Set(Var_TandaTela,ComboBoxUbicacion.Selected.Value)
@@ -235,7 +236,7 @@ Screen1 As screen:
         Label3_3 As label:
             FontWeight: =FontWeight.Bold
             Size: =14
-            Text: ="Tanda"
+            Text: ="Tanda Tela"
             Width: =221
             X: =1131
             Y: =24
@@ -256,7 +257,7 @@ Screen1 As screen:
                     (IsBlank(ComboBoxCritica.Selected.Value) || critica = ComboBoxCritica.Selected.Value) &&
                     (IsBlank(ComboBoxCentro.Selected.Value) || Centro = ComboBoxCentro.Selected.Value) &&
                     (IsBlank(ComboBoxUbicacion.Selected.Value) || Ubicacion = ComboBoxUbicacion.Selected.Value) &&
-                    (IsBlank(ComboBoxTanda.Selected.Value) || Tanda = ComboBoxTanda.Selected.Value) &&
+                    (IsBlank(ComboBoxTanda.Selected.Value) || TandaTela = ComboBoxTanda.Selected.Value) &&
                     (IsBlank(ComboBoxReferencia.Selected.Value) || referencia = ComboBoxReferencia.Selected.Value) &&
                     (IsBlank(ComboBoxPrio_Maq.Selected.Value) || Prio_Maq = ComboBoxPrio_Maq.Selected.Value)
                 )
@@ -917,4 +918,20 @@ Screen1 As screen:
         X: =2153
         Y: =10
         ZIndex: =4
+
+    Icon2 As icon.Erase:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =51
+        Icon: =Icon.Erase
+        OnSelect: |-
+            =Reset(ComboBoxCentro);
+            Reset(ComboBoxCritica);
+            Reset(ComboBoxUbicacion);
+            Reset(ComboBoxTanda);
+            Reset(ComboBoxReferencia);
+            Reset(ComboBoxPrio_Maq);
+        Width: =39
+        X: =25
+        Y: =10
+        ZIndex: =5
 

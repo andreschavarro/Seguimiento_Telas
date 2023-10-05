@@ -892,3 +892,29 @@ Screen1 As screen:
             X: =1819
             ZIndex: =25
 
+    Icon1 As icon.Download:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =49
+        Icon: =Icon.Download
+        OnSelect: |-
+            =Office365Outlook.SendEmailV2(
+                User().Email,
+                "PDF Seguimiento De Telas",
+                "Encuentre adjunto su PDF generado de la Tabla",
+                {
+                    Attachments: Table(
+                        {
+                            Name: "Busqueda ColorApp.pdf",
+                            ContentBytes: PDF(
+                                ContainerGallery,
+                                {ExpandContainers: true}
+                            )
+                        }
+                    )
+                }
+            )
+        Width: =61
+        X: =2153
+        Y: =10
+        ZIndex: =4
+

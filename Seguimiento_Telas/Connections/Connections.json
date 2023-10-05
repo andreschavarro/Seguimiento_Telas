@@ -20,5 +20,33 @@
     "dependencies": {},
     "dependents": [],
     "id": "4099b8b1-3b3b-47c3-9c41-3a0d28791b13"
+  },
+  "6627f513-7626-42b0-8b4e-c30e974b9cc5": {
+    "connectionRef": {
+      "displayName": "Usuarios de Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [
+      "UsuariosdeOffice365"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6627f513-7626-42b0-8b4e-c30e974b9cc5"
+  },
+  "beb72281-fd0d-4c46-a4d9-1ad2b160b14f": {
+    "connectionRef": {
+      "displayName": "Office\u00A0365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365"
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "beb72281-fd0d-4c46-a4d9-1ad2b160b14f"
   }
 }

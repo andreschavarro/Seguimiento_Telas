@@ -905,7 +905,7 @@ Screen1 As screen:
                 {
                     Attachments: Table(
                         {
-                            Name: "Busqueda ColorApp.pdf",
+                            Name: "Seguimiento De Telas.pdf",
                             ContentBytes: PDF(
                                 ContainerGallery,
                                 {ExpandContainers: true}

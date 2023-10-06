@@ -373,13 +373,16 @@ Screen1 As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(237, 237, 237, 1)
                 OnChange: |-
-                    =Patch(
-                        seg_Telas_DEV,
-                        LookUp(
+                    =ForAll(
+                        Filter(
                             seg_Telas_DEV,
                             TandaTela = ThisItem.TandaTela
                         ),
-                        {observaciones: TextInput1.Text}
+                        Patch(
+                            seg_Telas_DEV,
+                                ThisRecord,
+                            {observaciones: TextInput1.Text}
+                        )
                     )
                 OnSelect: =Select(Parent)
                 Width: =255

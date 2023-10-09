@@ -3,7 +3,7 @@ Screen2 As screen:
     PowerBI1 As powerbi:
         Height: =675
         TileUrl: |-
-            ="https://app.powerbi.com/links/YhGmYZqKW7?ctid=6a4eb463-82bd-4a0b-ad11-ffebd2fb7285&pbi_source=linkShare&bookmarkGuid=43a9c6ec-e754-4c1d-a058-f5d6da2cc019"
+            ="https://app.powerbi.com/reportEmbed?reportId=75e55792-4a96-4922-bf12-ebcfb1b5bfc4&autoAuth=true&ctid=6a4eb463-82bd-4a0b-ad11-ffebd2fb7285"
         Width: =1337
         X: =10
         Y: =76

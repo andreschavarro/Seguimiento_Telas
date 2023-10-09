@@ -87,7 +87,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/09/2023 16:38:59",
+  "HeaderLastSavedDateTimeUTC": "10/09/2023 16:43:24",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/98c8019d8ab848e18e465ae10ed14df4\"",
@@ -208,8 +208,8 @@
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
     "App": 0,
-    "ComboBoxCentro": 17,
-    "ComboBoxCritica": 16,
+    "ComboBoxCentro": 16,
+    "ComboBoxCritica": 15,
     "ComboBoxPrio_Maq": 20,
     "ComboBoxReferencia": 19,
     "ComboBoxTanda": 18,

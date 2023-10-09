@@ -72,15 +72,17 @@
     "Label7_8": 32,
     "Label7_9": 31,
     "Label8": 76,
+    "PowerBI1": 78,
     "Rectangle1": 6,
     "Rectangle2": 50,
     "Screen1": 4,
+    "Screen2": 77,
     "Separator1": 75,
     "TextInput1": 74
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/06/2023 17:30:03",
+  "HeaderLastSavedDateTimeUTC": "10/09/2023 16:21:46",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/98c8019d8ab848e18e465ae10ed14df4\"",
@@ -109,6 +111,7 @@
     "groupContainer": 0,
     "icon": 3,
     "label": 2,
+    "powerbi": 7,
     "rectangle": 1,
     "text": 6
   },
@@ -183,9 +186,11 @@
     "Label7_8": {},
     "Label7_9": {},
     "Label8": {},
+    "PowerBI1": {},
     "Rectangle1": {},
     "Rectangle2": {},
     "Screen1": {},
+    "Screen2": {},
     "Separator1": {},
     "TextInput1": {}
   },
@@ -262,9 +267,11 @@
     "Label7_8": 27,
     "Label7_9": 26,
     "Label8": 71,
+    "PowerBI1": 0,
     "Rectangle1": 1,
     "Rectangle2": 45,
     "Screen1": 0,
+    "Screen2": 0,
     "Separator1": 70,
     "TextInput1": 69
   },
@@ -274,7 +281,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.4551776,
+    "AnalysisLoadTime": 0.4990283,
     "ControlCount": {
       "combobox": 6,
       "gallery": 1,
@@ -286,7 +293,7 @@
       "screen": 1,
       "text": 1
     },
-    "DeserializationLoadTime": 3.5009813
+    "DeserializationLoadTime": 1.6130405
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

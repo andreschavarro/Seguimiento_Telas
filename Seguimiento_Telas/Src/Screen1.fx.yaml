@@ -21,7 +21,7 @@ Screen1 As screen:
             Size: =20
             Text: ="Seguimiento Telas"
             Width: =313
-            X: =1064
+            X: =914
             Y: =15
             ZIndex: =2
 
@@ -31,27 +31,6 @@ Screen1 As screen:
         Width: =2230
         Y: =70
         ZIndex: =2
-
-        ComboBoxCentro As combobox:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronFill: =RGBA(0, 0, 0, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(0, 0, 0, 1)
-            DisplayFields: =["Value"]
-            Font: =Font.'Segoe UI'
-            HoverBorderColor: =RGBA(56, 96, 178, 1)
-            HoverFill: =RGBA(237, 237, 237, 1)
-            InputTextPlaceholder: ="Buscar Centro"
-            IsSearchable: =false
-            Items: =Distinct(seg_Telas_DEV, Centro)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            SelectMultiple: =false
-            Width: =299
-            X: =410
-            Y: =64
-            ZIndex: =1
 
         ComboBoxReferencia As combobox:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -242,6 +221,36 @@ Screen1 As screen:
             Y: =24
             ZIndex: =15
 
+        ComboBoxCentro As combobox:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(33, 33, 33, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisplayFields: =["Value"]
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            InputTextPlaceholder: ="Buscar Centro"
+            Items: =Distinct(seg_Telas_DEV, Centro)
+            OnChange: =Set(Var_TandaTela,ComboBoxCentro.Selected.Value)
+            OnSelect: =Set(Var_TandaTela,ComboBoxCentro.Selected.Value)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SearchFields: =["Value"]
+            SearchItems: =Search(Distinct(seg_Telas_DEV, Centro),ComboBoxCentro.SearchText,"Value")
+            SelectionFill: =RGBA(0, 120, 212, 1)
+            SelectMultiple: =false
+            Width: =299
+            X: =399
+            Y: =67
+            ZIndex: =16
+
     ContainerGallery As groupContainer.manualLayoutContainer:
         Height: =538
         Width: =2225
@@ -250,7 +259,7 @@ Screen1 As screen:
 
         "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             DelayItemLoading: =true
-            Height: =475
+            Height: =444
             Items: |+
                 =Filter(
                     seg_Telas_DEV,
@@ -918,8 +927,8 @@ Screen1 As screen:
                 }
             )
         Width: =61
-        X: =2153
-        Y: =10
+        X: =2137
+        Y: =11
         ZIndex: =4
 
     Icon2 As icon.Erase:
@@ -937,4 +946,33 @@ Screen1 As screen:
         X: =25
         Y: =10
         ZIndex: =5
+
+    Container1 As groupContainer.manualLayoutContainer:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =1
+        Height: =50
+        Width: =174
+        X: =1936
+        Y: =10
+        ZIndex: =6
+
+        Icon3_1 As icon.Database:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =47
+            Icon: =Icon.Database
+            OnSelect: =Navigate(Screen2)
+            Width: =47
+            X: =117
+            Y: =2
+            ZIndex: =1
+
+        Label5_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            OnSelect: =Navigate(Screen2)
+            Text: ="Informe BI"
+            Width: =105
+            X: =12
+            Y: =9
+            ZIndex: =2
 

@@ -942,16 +942,9 @@ Screen1 As screen:
                     }
                 )
             );
-            Set(
-                jkhbjs,
-                JSON(
-                    excelsegtelas,
-                    JSONFormat.IncludeBinaryData
-                )
-            );
             EXCEL_SEGUIMIENTO_TELAS.Run(
                 JSON(
-                    jkhbjs,
+                    excelsegtelas,
                     JSONFormat.IncludeBinaryData
                 )
             );

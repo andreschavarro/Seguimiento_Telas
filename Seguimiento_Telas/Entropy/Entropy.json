@@ -87,7 +87,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/23/2023 00:31:06",
+  "HeaderLastSavedDateTimeUTC": "10/23/2023 20:45:20",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "3ea2c843-321e-43eb-affe-31dc057114b5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/135929e2f9874cf9940b7a4aab167b86-0bc5efd839285d2e\"",
@@ -104,6 +104,7 @@
     "ComboBoxSample": 3,
     "CustomGallerySample": 4,
     "EXCEL_SEGUIMIENTO_TELAS": 2,
+    "excelsegtelas": 7,
     "ListboxSample": 6,
     "Office365Outlook": 1,
     "seg_Telas_DEV": 5,
@@ -298,7 +299,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.4596274,
+    "AnalysisLoadTime": 0.4469648,
     "ControlCount": {
       "combobox": 6,
       "gallery": 1,
@@ -311,7 +312,7 @@
       "screen": 2,
       "text": 1
     },
-    "DeserializationLoadTime": 3.2518914
+    "DeserializationLoadTime": 2.5599343
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

@@ -4,9 +4,9 @@ App As appinfo:
         =Set(FiltroCritica,ComboBoxCritica.Selected.Value);
         Set(FiltroCentro,ComboBoxCentro.Selected.Value);
         Set(FiltroUbicacion,ComboBoxUbicacion.Selected.Value);
-        Set(FiltroTanda,ComboBoxTanda.Selected.Value);
+        Set(FiltroTanda,ComboBoxTandaTela.Selected.Value);
         Set(Filtroreferencia,ComboBoxReferencia.Selected.Value);
-        Set(FiltroPrio_Maq,ComboBoxPrio_Maq.Selected.Value);
+        Set(FiltroPrio_Maq,ComboBoxTanda.Selected.Value);
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

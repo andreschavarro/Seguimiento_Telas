@@ -1005,12 +1005,8 @@ Screen1 As screen:
                 )
             );
             Set(
-                paramsegtelas,
-                JSON(excelsegtelas)
-            );
-            Set(
                 response,
-                EXCEL_SEGUIMIENTO_TELAS.Run(paramsegtelas)
+                EXCEL_SEGUIMIENTO_TELAS.Run(JSON(excelsegtelas))
             );
             Notify(
                 "Se descargo el excel exitosamente",

@@ -1,4 +1,30 @@
 {
+  "070227f3-fb06-4f56-8492-77751f7c5095": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "135929e2-f987-4cf9-940b-7a4aab167b86"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "135929e2-f987-4cf9-940b-7a4aab167b86"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "EXCEL_SEGUIMIENTO_TELAS"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "070227f3-fb06-4f56-8492-77751f7c5095"
+  },
   "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -48,31 +74,5 @@
     "dependencies": {},
     "dependents": [],
     "id": "beb72281-fd0d-4c46-a4d9-1ad2b160b14f"
-  },
-  "eff09824-6249-465c-bfe0-8890770bff05": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "135929e2-f987-4cf9-940b-7a4aab167b86"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "135929e2-f987-4cf9-940b-7a4aab167b86"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "EXCEL_SEGUIMIENTO_TELAS"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "eff09824-6249-465c-bfe0-8890770bff05"
   }
 }

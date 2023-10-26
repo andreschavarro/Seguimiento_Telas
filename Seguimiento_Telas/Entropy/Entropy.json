@@ -91,13 +91,13 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/26/2023 13:38:20",
+  "HeaderLastSavedDateTimeUTC": "10/26/2023 14:12:33",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/98c8019d8ab848e18e465ae10ed14df4\"",
     "6627f513-7626-42b0-8b4e-c30e974b9cc5": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/f3e893222988470389fb1440c20e0f35\"",
     "beb72281-fd0d-4c46-a4d9-1ad2b160b14f": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/bde3c200c901430693eced529863bb46\"",
-    "eff09824-6249-465c-bfe0-8890770bff05": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/135929E2F9874CF9940B7A4AAB167B86-0BC5EFD839285D2E\""
+    "eff09824-6249-465c-bfe0-8890770bff05": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/135929e2f9874cf9940b7a4aab167b86-0bc5efd839285d2e\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -108,7 +108,6 @@
     "ComboBoxSample": 3,
     "CustomGallerySample": 4,
     "EXCEL_SEGUIMIENTO_TELAS": 2,
-    "excelsegtelas": 7,
     "ListboxSample": 6,
     "Office365Outlook": 1,
     "seg_Telas_DEV": 5,

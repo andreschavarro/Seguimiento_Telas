@@ -323,15 +323,16 @@ Screen1 As screen:
             Items: |+
                 =Filter(
                     seg_Telas_DEV,
-                    (IsBlank(ComboBoxCritica.Selected.Value) || critica = ComboBoxCritica.Selected.Value) &&
-                    (IsBlank(ComboBoxCentro.Selected.Value) || Centro = ComboBoxCentro.Selected.Value) &&
-                    (IsBlank(ComboBoxUbicacion.Selected.Value) || Ubicacion = ComboBoxUbicacion.Selected.Value) &&
-                    (IsBlank(ComboBoxTandaTela.Selected.Value) || TandaTela = ComboBoxTandaTela.Selected.Value) &&
-                    (IsBlank(ComboBoxReferencia.Selected.Value) || referencia = ComboBoxReferencia.Selected.Value) &&
-                    (IsBlank(ComboBoxTanda.Selected.Value) || Tanda = ComboBoxTanda.Selected.Value) &&
-                    (IsBlank(ComboBoxDiasArmado.Selected.Value) || Dias_Armado = ComboBoxDiasArmado.Selected.Value) &&
-                    (IsBlank(ComboBoxOp.Selected.Value) || OP = ComboBoxOp.Selected.Value) 
+                    (IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems) &&
+                    (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&
+                    (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
+                    (IsBlank(ComboBoxTandaTela.SelectedItems) || TandaTela in ComboBoxTandaTela.SelectedItems) &&
+                    (IsBlank(ComboBoxReferencia.SelectedItems) || referencia in ComboBoxReferencia.SelectedItems) &&
+                    (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
+                    (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
+                    (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems)
                 )
+                
                 
                 /*
                 Filter(

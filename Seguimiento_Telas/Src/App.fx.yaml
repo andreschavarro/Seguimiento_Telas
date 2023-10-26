@@ -1,12 +1,13 @@
 App As appinfo:
     BackEnabled: =false
     OnStart: |
-        =Set(FiltroCritica,ComboBoxCritica.Selected.Value);
-        Set(FiltroCentro,ComboBoxCentro.Selected.Value);
-        Set(FiltroUbicacion,ComboBoxUbicacion.Selected.Value);
-        Set(FiltroTanda,ComboBoxTandaTela.Selected.Value);
-        Set(Filtroreferencia,ComboBoxReferencia.Selected.Value);
-        Set(FiltroPrio_Maq,ComboBoxTanda.Selected.Value);
+        =/*Set(FiltroCritica;ComboBoxCritica.Selected.Value);;
+        Set(FiltroCentro;ComboBoxCentro.Selected.Value);;
+        Set(FiltroUbicacion;ComboBoxUbicacion.Selected.Value);;
+        Set(FiltroTanda;ComboBoxTandaTela.Selected.Value);;
+        Set(Filtroreferencia;ComboBoxReferencia.Selected.Value);;
+        Set(FiltroPrio_Maq;ComboBoxTanda.Selected.Value);;*/
+        Set(FiltrosAplicados,true)
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

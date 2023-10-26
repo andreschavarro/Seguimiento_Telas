@@ -972,21 +972,50 @@ Screen1 As screen:
         Height: =49
         Icon: =Icon.Download
         OnSelect: |-
-            =Office365Outlook.SendEmailV2(
-                User().Email,
-                "PDF Seguimiento De Telas",
-                "Encuentre adjunto su PDF generado de la Tabla",
-                {
-                    Attachments: Table(
-                        {
-                            Name: "Seguimiento De Telas.pdf",
-                            ContentBytes: PDF(
-                                ContainerGallery,
-                                {ExpandContainers: true}
-                            )
-                        }
-                    )
-                }
+            =ClearCollect(
+                excelsegtelas,
+                ForAll(
+                    Gallery1.AllItems,
+                    {
+                        prioridad: ThisRecord.critica,
+                        centro: ThisRecord.Centro,
+                        Tipo_orden: ThisRecord.Tipo_orden,
+                        referencia: ThisRecord.referencia,
+                        Dias_Armado: ThisRecord.Dias_Armado,
+                        Dias_centro: ThisRecord.Dias_centro,
+                        Dias_Ubicacion: ThisRecord.Dias_Ubicacion,
+                        Grupo: ThisRecord.Grupo,
+                        OP: ThisRecord.OP,
+                        Tanda: ThisRecord.Tanda,
+                        Color: ThisRecord.Color,
+                        Descripcion_Tela: ThisRecord.Descripcion_Tela,
+                        Ubicacion: ThisRecord.Ubicacion,
+                        Maq_Tintoreria: ThisRecord.Maq_Tintoreria,
+                        Prio_Maq: ThisRecord.Prio_Maq,
+                        TandaTela: ThisRecord.TandaTela,
+                        Obs_Maq_Tintoreria: ThisRecord.Obs_Maq_Tintoreria,
+                        co_linea: ThisRecord.co_linea,
+                        Pedido: ThisRecord.Pedido,
+                        Co_Referencia: ThisRecord.Co_Referencia,
+                        Reposo_Corte: ThisRecord.Reposo_Corte,
+                        T_Pieza: ThisRecord.T_Pieza,
+                        Total: ThisRecord.Total,
+                        observaciones: ThisRecord.observaciones
+                    }
+                )
+            );
+            Set(
+                paramsegtelas,
+                JSON(excelsegtelas)
+            );
+            Set(
+                response,
+                EXCEL_SEGUIMIENTO_TELAS.Run(paramsegtelas)
+            );
+            Notify(
+                "Se descargo el excel exitosamente",
+                NotificationType.Success,
+                2000
             )
         Width: =61
         X: =2137

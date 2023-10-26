@@ -42,9 +42,9 @@ Screen1 As screen:
             HoverBorderColor: =RGBA(56, 96, 178, 1)
             HoverFill: =RGBA(219, 219, 219, 1)
             InputTextPlaceholder: ="Buscar Referencia"
-            Items: =Distinct(seg_Telas_DEV, Co_Referencia)
+            Items: =Distinct(seg_Telas_DEV, referencia)
             SearchFields: =["Value"]
-            SearchItems: =Search(Distinct(seg_Telas_DEV, Co_Referencia),ComboBoxReferencia.SearchText,"Value")
+            SearchItems: =Search(Distinct(seg_Telas_DEV, referencia),ComboBoxReferencia.SearchText,"Value")
             Width: =250
             X: =1414
             Y: =67
@@ -327,7 +327,7 @@ Screen1 As screen:
                     (IsBlank(ComboBoxCentro.Selected.Value) || Centro = ComboBoxCentro.Selected.Value) &&
                     (IsBlank(ComboBoxUbicacion.Selected.Value) || Ubicacion = ComboBoxUbicacion.Selected.Value) &&
                     (IsBlank(ComboBoxTandaTela.Selected.Value) || TandaTela = ComboBoxTandaTela.Selected.Value) &&
-                    (IsBlank(ComboBoxReferencia.Selected.Value) || Co_Referencia = ComboBoxReferencia.Selected.Value) &&
+                    (IsBlank(ComboBoxReferencia.Selected.Value) || referencia = ComboBoxReferencia.Selected.Value) &&
                     (IsBlank(ComboBoxTanda.Selected.Value) || Tanda = ComboBoxTanda.Selected.Value) &&
                     (IsBlank(ComboBoxDiasArmado.Selected.Value) || Dias_Armado = ComboBoxDiasArmado.Selected.Value) &&
                     (IsBlank(ComboBoxOp.Selected.Value) || OP = ComboBoxOp.Selected.Value) 
@@ -400,7 +400,7 @@ Screen1 As screen:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
-                Text: =ThisItem. Co_Referencia
+                Text: =ThisItem. referencia
                 Width: =181
                 X: =281
                 ZIndex: =10

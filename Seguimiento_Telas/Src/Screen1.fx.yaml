@@ -43,6 +43,8 @@ Screen1 As screen:
             HoverFill: =RGBA(219, 219, 219, 1)
             InputTextPlaceholder: ="Buscar Referencia"
             Items: =Distinct(seg_Telas_DEV, referencia)
+            OnChange: =Set(FiltroReferencia, ComboBoxReferencia.Selected.Value)
+            OnSelect: =Set(FiltroReferencia, ComboBoxReferencia.Selected.Value)
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(seg_Telas_DEV, referencia),ComboBoxReferencia.SearchText,"Value")
             Width: =210
@@ -92,8 +94,8 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar TandaTela"
             Items: =Distinct(seg_Telas_DEV,TandaTela)
-            OnChange: =ComboBoxTandaTela.Selected.Value
-            OnSelect: =ComboBoxTandaTela.Selected.Value
+            OnChange: =Set(FiltroTandatela,ComboBoxTandaTela.Selected.Value)
+            OnSelect: =Set(FiltroTandatela,ComboBoxTandaTela.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -121,8 +123,8 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Tanda"
             Items: =Distinct(seg_Telas_DEV, Tanda)
-            OnChange: =ComboBoxTanda.Selected.Value
-            OnSelect: =ComboBoxTanda.Selected.Value
+            OnChange: =Set(FiltroTanda,ComboBoxTanda.Selected.Value)
+            OnSelect: =Set(FiltroTanda,ComboBoxTanda.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -150,8 +152,8 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Critica"
             Items: =Distinct(seg_Telas_DEV,critica)
-            OnChange: =Set(Var_TandaTela,ComboBoxCritica.Selected.Value)
-            OnSelect: =Set(Var_TandaTela,ComboBoxCritica.Selected.Value)
+            OnChange: =Set(FiltroCritica,ComboBoxCritica.Selected.Value)
+            OnSelect: =Set(FiltroCritica,ComboBoxCritica.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -179,8 +181,8 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Ubicacion"
             Items: =Distinct(seg_Telas_DEV, Ubicacion)
-            OnChange: =ComboBoxUbicacion.Selected.Value
-            OnSelect: =ComboBoxUbicacion.Selected.Value
+            OnChange: =Set(FiltroUbicacion,ComboBoxUbicacion.Selected.Value)
+            OnSelect: =Set(FiltroUbicacion,ComboBoxUbicacion.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -225,8 +227,8 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Centro"
             Items: =Distinct(seg_Telas_DEV, Centro)
-            OnChange: =Set(Var_TandaTela,ComboBoxCentro.Selected.Value)
-            OnSelect: =Set(Var_TandaTela,ComboBoxCentro.Selected.Value)
+            OnChange: =Set(FiltroCentro,ComboBoxCentro.Selected.Value)
+            OnSelect: =Set(FiltroCentro,ComboBoxCentro.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -255,8 +257,8 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Centro"
             IsSearchable: =false
             Items: =Distinct(seg_Telas_DEV, Dias_Armado)
-            OnChange: =ComboBoxDiasArmado.Selected.Value
-            OnSelect: =ComboBoxDiasArmado.Selected.Value
+            OnChange: =Set(FiltroArmado,ComboBoxDiasArmado.Selected.Value)
+            OnSelect: =Set(FiltroArmado,ComboBoxDiasArmado.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -295,6 +297,8 @@ Screen1 As screen:
             HoverFill: =RGBA(219, 219, 219, 1)
             InputTextPlaceholder: ="Buscar OP"
             Items: =Distinct(seg_Telas_DEV, OP)
+            OnChange: =Set(FiltroOP, ComboBoxOp.Selected.Value)
+            OnSelect: =Set(FiltroOP, ComboBoxOp.Selected.Value)
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(seg_Telas_DEV, OP),ComboBoxOp.SearchText,"Value")
             Width: =210
@@ -322,6 +326,8 @@ Screen1 As screen:
             HoverFill: =RGBA(219, 219, 219, 1)
             InputTextPlaceholder: ="Buscar Grupo"
             Items: =Distinct(seg_Telas_DEV, Grupo)
+            OnChange: =Set(FiltroGrupo, ComboBoxGrupo.Selected.Value)
+            OnSelect: =Set(FiltroGrupo, ComboBoxGrupo.Selected.Value)
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(seg_Telas_DEV, Grupo),ComboBoxGrupo.SearchText,"Value")
             Width: =210
@@ -346,8 +352,8 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Busca Maq_Tintoreria"
             Items: =Distinct(seg_Telas_DEV, Obs_Maq_Tintoreria)
-            OnChange: =ComboBoxObs_Maq_Tintoreria.Selected.Value
-            OnSelect: =ComboBoxObs_Maq_Tintoreria.Selected.Value
+            OnChange: =Set(FiltroMaq_tintoreria,ComboBoxObs_Maq_Tintoreria.Selected.Value)
+            OnSelect: =Set(FiltroMaq_tintoreria,ComboBoxObs_Maq_Tintoreria.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -388,14 +394,16 @@ Screen1 As screen:
             Items: |-
                 =Filter(
                     seg_Telas_DEV,
-                    (IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems) &&
-                    (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&
-                    (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
-                    (IsBlank(ComboBoxTandaTela.SelectedItems) || TandaTela in ComboBoxTandaTela.SelectedItems) &&
-                    (IsBlank(ComboBoxReferencia.SelectedItems) || referencia in ComboBoxReferencia.SelectedItems) &&
-                    (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
-                    (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
-                    (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems)
+                    (IsBlank(FiltroCritica) || critica  = FiltroCritica) &&
+                    (IsBlank(FiltroCentro) || Centro = FiltroCentro) &&
+                    (IsBlank(FiltroArmado) || Dias_Armado = FiltroArmado) &&
+                    (IsBlank(FiltroUbicacion) || Dias_Ubicacion = FiltroUbicacion) &&
+                    (IsBlank(FiltroTanda) || Tanda = FiltroTanda) &&
+                    (IsBlank(FiltroReferencia) || referencia = FiltroReferencia) &&
+                    (IsBlank(FiltroGrupo) || Grupo = FiltroGrupo) &&
+                    (IsBlank(FiltroOP) || OP = FiltroOP) &&
+                    (IsBlank(FiltroMaq_tintoreria) || Obs_Maq_Tintoreria = FiltroMaq_tintoreria) &&
+                    (IsBlank(FiltroTandatela) || TandaTela = FiltroTandatela)
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data

@@ -36,25 +36,16 @@ Screen1 As screen:
             FontWeight: =FontWeight.Bold
             Size: =14
             Text: ="Centro"
-            X: =287
-            Y: =18
+            X: =376
+            Y: =22
             ZIndex: =5
-
-        Label3 As label:
-            FontWeight: =FontWeight.Bold
-            Size: =14
-            Text: ="Referencia"
-            Width: =127
-            X: =1127
-            Y: =18
-            ZIndex: =6
 
         Label4 As label:
             FontWeight: =FontWeight.Bold
             Size: =14
             Text: ="Ubicacíon"
-            X: =689
-            Y: =21
+            X: =778
+            Y: =25
             ZIndex: =7
 
         ComboBoxTanda As combobox:
@@ -82,8 +73,8 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV, Tanda),ComboBoxTanda.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
-            X: =908
-            Y: =61
+            X: =985
+            Y: =68
             ZIndex: =10
 
         ComboBoxCritica As combobox:
@@ -111,8 +102,8 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV,critica),ComboBoxCritica.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
-            X: =22
-            Y: =61
+            X: =99
+            Y: =68
             ZIndex: =11
 
         ComboBoxUbicacion As combobox:
@@ -132,33 +123,33 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Ubicacion"
             Items: =Distinct(seg_Telas_DEV, Ubicacion)
-            OnChange: =Set(FiltroUbicacion,ComboBoxUbicacion.Selected.Value)
-            OnSelect: =Set(FiltroUbicacion,ComboBoxUbicacion.Selected.Value)
+            OnChange: =Set(FiltroUbicacion,ComboBoxUbicacion.SelectedItems.Value)
+            OnSelect: =Set(FiltroUbicacion,ComboBoxUbicacion.SelectedItems.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(seg_Telas_DEV, Ubicacion),ComboBoxUbicacion.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
-            X: =687
-            Y: =61
+            X: =764
+            Y: =68
             ZIndex: =12
 
         Label2_2 As label:
             FontWeight: =FontWeight.Bold
             Size: =14
             Text: ="Critica"
-            X: =22
-            Y: =21
+            X: =94
+            Y: =25
             ZIndex: =13
 
         Label3_3 As label:
             FontWeight: =FontWeight.Bold
             Size: =14
-            Text: ="Tanda Tela"
+            Text: ="Observacion"
             Width: =141
-            X: =2011
-            Y: =18
+            X: =1879
+            Y: =25
             ZIndex: =15
 
         ComboBoxCentro As combobox:
@@ -186,8 +177,8 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV, Centro),ComboBoxCentro.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
-            X: =244
-            Y: =61
+            X: =321
+            Y: =68
             ZIndex: =16
 
         ComboBoxDiasArmado As combobox:
@@ -216,16 +207,16 @@ Screen1 As screen:
             SearchItems: =[]
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
-            X: =468
-            Y: =61
+            X: =545
+            Y: =68
             ZIndex: =17
 
         Label4_1 As label:
             FontWeight: =FontWeight.Bold
             Size: =14
             Text: ="Dias Armado"
-            X: =468
-            Y: =21
+            X: =557
+            Y: =25
             ZIndex: =18
 
         Label3_4 As label:
@@ -233,8 +224,8 @@ Screen1 As screen:
             Size: =14
             Text: ="Tanda"
             Width: =97
-            X: =908
-            Y: =21
+            X: =985
+            Y: =28
             ZIndex: =19
 
         ComboBoxOp As combobox:
@@ -253,8 +244,8 @@ Screen1 As screen:
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(seg_Telas_DEV, OP),ComboBoxOp.SearchText,"Value")
             Width: =210
-            X: =1572
-            Y: =61
+            X: =1429
+            Y: =68
             ZIndex: =20
 
         Label3_5 As label:
@@ -262,8 +253,8 @@ Screen1 As screen:
             Size: =14
             Text: ="OP"
             Width: =129
-            X: =1572
-            Y: =21
+            X: =1429
+            Y: =28
             ZIndex: =21
 
         ComboBoxGrupo As combobox:
@@ -282,8 +273,8 @@ Screen1 As screen:
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(seg_Telas_DEV, Grupo),ComboBoxGrupo.SearchText,"Value")
             Width: =210
-            X: =1353
-            Y: =61
+            X: =1210
+            Y: =68
             ZIndex: =22
 
         ComboBoxObs_Maq_Tintoreria As combobox:
@@ -311,8 +302,8 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV, Obs_Maq_Tintoreria),ComboBoxObs_Maq_Tintoreria.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
-            X: =1790
-            Y: =61
+            X: =1647
+            Y: =68
             ZIndex: =23
 
         Label3_6 As label:
@@ -320,8 +311,8 @@ Screen1 As screen:
             Size: =14
             Text: ="Obs_Maq_Tintoreria"
             Width: =221
-            X: =1790
-            Y: =18
+            X: =1641
+            Y: =25
             ZIndex: =24
 
         Label3_7 As label:
@@ -329,8 +320,8 @@ Screen1 As screen:
             Size: =14
             Text: ="Grupo"
             Width: =129
-            X: =1353
-            Y: =18
+            X: =1210
+            Y: =25
             ZIndex: =25
 
         ComboBoxObservaciones As combobox:
@@ -348,7 +339,7 @@ Screen1 As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Busca Maq_Tintoreria"
+            InputTextPlaceholder: ="Busca Observacion"
             Items: =Distinct(seg_Telas_DEV, observaciones)
             OnChange: =Set(Filtrobservaciones,ComboBoxObservaciones.SelectedItems.Value)
             OnSelect: =Set(Filtrobservaciones,ComboBoxObservaciones.SelectedItems.Value)
@@ -358,9 +349,14 @@ Screen1 As screen:
             SearchItems: =Search(Distinct(seg_Telas_DEV, observaciones),ComboBoxObservaciones.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
-            X: =2020
-            Y: =61
+            X: =1877
+            Y: =68
             ZIndex: =26
+
+        Label3 As label:
+            Text: =(CountRows(ComboBoxCritica.SelectedItems))
+            Y: =6
+            ZIndex: =27
 
     ContainerGallery As groupContainer.manualLayoutContainer:
         Height: =538
@@ -374,15 +370,12 @@ Screen1 As screen:
             Items: |-
                 =Filter(
                     seg_Telas_DEV,
-                    (IsBlank(FiltroCritica) || critica  = FiltroCritica) &&
-                    (IsBlank(FiltroCentro) || Centro = FiltroCentro) &&
-                    (IsBlank(FiltroArmado) || Dias_Armado = FiltroArmado) &&
-                    (IsBlank(FiltroUbicacion) || Dias_Ubicacion = FiltroUbicacion) &&
-                    (IsBlank(FiltroTanda) || Tanda = FiltroTanda) &&
-                    (IsBlank(FiltroGrupo) || Grupo = FiltroGrupo) &&
-                    (IsBlank(FiltroOP) || OP = FiltroOP) &&
-                    (IsBlank(Filtrobservaciones) || observaciones in Filtrobservaciones) &&
-                    (IsBlank(FiltroMaq_tintoreria) || Obs_Maq_Tintoreria = FiltroMaq_tintoreria) 
+                    (CountRows(ComboBoxCritica.SelectedItems) = 0 || critica in ComboBoxCritica.SelectedItems) &&
+                    (CountRows(ComboBoxCentro.SelectedItems) = 0 || Centro in ComboBoxCentro.SelectedItems) &&
+                    (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
+                    (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
+                    (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
+                    (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems)
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data

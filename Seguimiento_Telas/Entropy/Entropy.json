@@ -5,7 +5,7 @@
     "App": 1,
     "ComboBoxCentro": 25,
     "ComboBoxCritica": 24,
-    "ComboBoxDiasArmado": 26,
+    "ComboBoxDiasArmado": 92,
     "ComboBoxGrupo": 29,
     "ComboBoxObs_Maq_Tintoreria": 31,
     "ComboBoxObservaciones": 32,
@@ -94,7 +94,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/01/2023 14:58:09",
+  "HeaderLastSavedDateTimeUTC": "11/01/2023 22:57:44",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "070227f3-fb06-4f56-8492-77751f7c5095": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/135929e2-f987-4cf9-940b-7a4aab167b86\"",
@@ -320,9 +320,9 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.6187282,
+    "AnalysisLoadTime": 0.5633177,
     "ControlCount": {
-      "combobox": 9,
+      "combobox": 10,
       "gallery": 1,
       "galleryTemplate": 1,
       "groupContainer": 4,
@@ -333,7 +333,7 @@
       "screen": 2,
       "text": 1
     },
-    "DeserializationLoadTime": 2.2331827
+    "DeserializationLoadTime": 2.4034066
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

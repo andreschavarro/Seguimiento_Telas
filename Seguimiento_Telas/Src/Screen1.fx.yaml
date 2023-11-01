@@ -182,36 +182,6 @@ Screen1 As screen:
             Y: =68
             ZIndex: =16
 
-        ComboBoxDiasArmado As combobox:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisplayFields: =["Value"]
-            Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Buscar Centro"
-            IsSearchable: =false
-            Items: =Distinct(seg_Telas_DEV, Dias_Armado)
-            OnChange: =Set(FiltroArmado,ComboBoxDiasArmado.Selected.Value)
-            OnSelect: =Set(FiltroArmado,ComboBoxDiasArmado.Selected.Value)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            SelectionFill: =RGBA(0, 120, 212, 1)
-            Width: =210
-            X: =545
-            Y: =68
-            ZIndex: =17
-
         Label4_1 As label:
             FontWeight: =FontWeight.Bold
             Size: =14
@@ -359,6 +329,36 @@ Screen1 As screen:
             Y: =6
             ZIndex: =27
 
+        ComboBoxDiasArmado As combobox:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(33, 33, 33, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisplayFields: =["Value"]
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            InputTextPlaceholder: ="Buscar Dias Armado"
+            IsSearchable: =false
+            Items: =Distinct(seg_Telas_DEV, Dias_Armado)
+            OnChange: =
+            OnSelect: =
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SearchFields: =["Value"]
+            SearchItems: =[]
+            SelectionFill: =RGBA(0, 120, 212, 1)
+            Width: =210
+            X: =542
+            Y: =68
+            ZIndex: =28
+
     ContainerGallery As groupContainer.manualLayoutContainer:
         Height: =772
         Width: =2225
@@ -368,15 +368,19 @@ Screen1 As screen:
         "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             DelayItemLoading: =true
             Height: =709
-            Items: |-
+            Items: |
                 =Filter(
                     seg_Telas_DEV,
-                    (CountRows(ComboBoxCritica.SelectedItems) = 0 || critica in ComboBoxCritica.SelectedItems) &&
-                    (CountRows(ComboBoxCentro.SelectedItems) = 0 || Centro in ComboBoxCentro.SelectedItems) &&
+                    (IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems) &&
+                    (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&
                     (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
                     (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
                     (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
-                    (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems)
+                    (IsBlank(ComboBoxGrupo.SelectedItems) || Grupo in ComboBoxGrupo.SelectedItems) &&
+                    (IsBlank(ComboBoxObs_Maq_Tintoreria.SelectedItems) || Obs_Maq_Tintoreria in ComboBoxObs_Maq_Tintoreria.SelectedItems) &&
+                    (IsBlank(ComboBoxObservaciones.SelectedItems) || observaciones in ComboBoxObservaciones.SelectedItems) &&
+                    (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems) ||
+                    IsBlank(ComboBoxCritica.SelectedItems) && IsBlank(ComboBoxCentro.SelectedItems) && IsBlank(ComboBoxUbicacion.SelectedItems) && IsBlank(ComboBoxTanda.SelectedItems) && IsBlank(ComboBoxDiasArmado.SelectedItems) && IsBlank(ComboBoxGrupo.SelectedItems) && IsBlank(ComboBoxObs_Maq_Tintoreria.SelectedItems) && IsBlank(ComboBoxObservaciones.SelectedItems) && IsBlank(ComboBoxOp.SelectedItems)
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data

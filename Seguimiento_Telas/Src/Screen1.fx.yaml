@@ -371,16 +371,15 @@ Screen1 As screen:
             Items: |
                 =Filter(
                     seg_Telas_DEV,
-                    (IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems) &&
-                    (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&
-                    (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
-                    (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
-                    (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
-                    (IsBlank(ComboBoxGrupo.SelectedItems) || Grupo in ComboBoxGrupo.SelectedItems) &&
-                    (IsBlank(ComboBoxObs_Maq_Tintoreria.SelectedItems) || Obs_Maq_Tintoreria in ComboBoxObs_Maq_Tintoreria.SelectedItems) &&
-                    (IsBlank(ComboBoxObservaciones.SelectedItems) || observaciones in ComboBoxObservaciones.SelectedItems) &&
-                    (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems) ||
-                    IsBlank(ComboBoxCritica.SelectedItems) && IsBlank(ComboBoxCentro.SelectedItems) && IsBlank(ComboBoxUbicacion.SelectedItems) && IsBlank(ComboBoxTanda.SelectedItems) && IsBlank(ComboBoxDiasArmado.SelectedItems) && IsBlank(ComboBoxGrupo.SelectedItems) && IsBlank(ComboBoxObs_Maq_Tintoreria.SelectedItems) && IsBlank(ComboBoxObservaciones.SelectedItems) && IsBlank(ComboBoxOp.SelectedItems)
+                    (CountRows(ComboBoxCritica.SelectedItems) = 0 || critica in ComboBoxCritica.SelectedItems) &&
+                    (CountRows(ComboBoxCentro.SelectedItems) = 0 || Centro in ComboBoxCentro.SelectedItems) &&
+                    (CountRows(ComboBoxUbicacion.SelectedItems) = 0 || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
+                    (CountRows(ComboBoxTanda.SelectedItems) = 0 || Tanda in ComboBoxTanda.SelectedItems) &&
+                    (CountRows(ComboBoxDiasArmado.SelectedItems) = 0 || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
+                    (CountRows(ComboBoxGrupo.SelectedItems) = 0 || Grupo in ComboBoxGrupo.SelectedItems) &&
+                    (CountRows(ComboBoxObs_Maq_Tintoreria.SelectedItems) = 0 || Obs_Maq_Tintoreria in ComboBoxObs_Maq_Tintoreria.SelectedItems) &&
+                    (CountRows(ComboBoxObservaciones.SelectedItems) = 0 || observaciones in ComboBoxObservaciones.SelectedItems) &&
+                    (CountRows(ComboBoxOp.SelectedItems) = 0 || OP in ComboBoxOp.SelectedItems)
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data

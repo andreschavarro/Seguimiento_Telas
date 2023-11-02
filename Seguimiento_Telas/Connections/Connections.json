@@ -25,6 +25,20 @@
     "dependents": [],
     "id": "070227f3-fb06-4f56-8492-77751f7c5095"
   },
+  "1f857f8e-199d-49a9-a982-06a77e00b75e": {
+    "connectionRef": {
+      "displayName": "Power Automate para administradores",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/microsoftflowforadmins/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_microsoftflowforadmins"
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAutomateparaadministradores"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "1f857f8e-199d-49a9-a982-06a77e00b75e"
+  },
   "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": {
     "connectionRef": {
       "displayName": "SharePoint",

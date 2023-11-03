@@ -1127,14 +1127,15 @@ Screen1 As screen:
                         Ubicacion: ThisRecord.Ubicacion,
                         Maq_Tintoreria: ThisRecord.Maq_Tintoreria,
                         Prio_Maq: ThisRecord.Prio_Maq,
-                        TandaTela: ThisRecord.TandaTela,
-                        Obs_Maq_Tintoreria: ThisRecord.Obs_Maq_Tintoreria,
+                        Ref_Tela: ThisRecord.Ref_Tela,
+                        Obs_Pdp_Tintoreria: ThisRecord.Obs_Pdp_Tintoreria,
                         co_linea: ThisRecord.co_linea,
                         Pedido: ThisRecord.Pedido,
                         Co_Referencia: ThisRecord.Co_Referencia,
                         Reposo_Corte: ThisRecord.Reposo_Corte,
                         T_Pieza: ThisRecord.T_Pieza,
                         Total: ThisRecord.Total,
+                        historico_observaciones: ThisRecord.historico_observaciones,
                         observaciones: ThisRecord.observaciones
                     }
                 )

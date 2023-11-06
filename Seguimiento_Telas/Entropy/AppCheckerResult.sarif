@@ -464,7 +464,47 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1120,
+                  "charOffset": 1020,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Screen1",
+                "type": "Screen1.ContainerGallery.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.ContainerGallery.Gallery1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.ContainerGallery.Gallery1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 1158,
                   "snippet": {
                     "text": "in"
                   }
@@ -504,7 +544,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1109,
+                  "charOffset": 1147,
                   "snippet": {
                     "text": "||"
                   }
@@ -544,7 +584,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1154,
+                  "charOffset": 1192,
                   "snippet": {
                     "text": "&&"
                   }
@@ -584,7 +624,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1247,
+                  "charOffset": 1285,
                   "snippet": {
                     "text": "&&"
                   }
@@ -624,7 +664,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1349,
+                  "charOffset": 1387,
                   "snippet": {
                     "text": "&&"
                   }
@@ -664,7 +704,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1439,
+                  "charOffset": 1477,
                   "snippet": {
                     "text": "&&"
                   }
@@ -704,7 +744,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1545,
+                  "charOffset": 1583,
                   "snippet": {
                     "text": "&&"
                   }
@@ -744,7 +784,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1659,
+                  "charOffset": 1697,
                   "snippet": {
                     "text": "&&"
                   }
@@ -784,7 +824,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1758,
+                  "charOffset": 1796,
                   "snippet": {
                     "text": "&&"
                   }
@@ -824,7 +864,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1887,
+                  "charOffset": 1925,
                   "snippet": {
                     "text": "&&"
                   }

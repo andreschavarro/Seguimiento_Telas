@@ -435,7 +435,7 @@ Screen1 As screen:
                         (IsBlank(ComboBoxRef_Tela.SelectedItems) || Ref_Tela in ComboBoxRef_Tela.SelectedItems) &&
                         (IsBlank(ComboBoxObs_Maq_Tintoreria.SelectedItems) || Obs_Maq_Tintoreria in ComboBoxObs_Maq_Tintoreria.SelectedItems) &&
                         (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems) &&
-                        (historico_observaciones = observaciones)
+                         (historico_observaciones = observaciones) && !IsBlank(historico_observaciones)
                     ),
                     Filter(
                         seg_Telas_DEV,

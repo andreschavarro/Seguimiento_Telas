@@ -96,7 +96,8 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Critica"
             Items: =Distinct(seg_Telas_DEV,critica)
             OnChange: =Set(FiltroCritica,ComboBoxCritica.Selected.Value)
-            OnSelect: =Set(FiltroCritica,ComboBoxCritica.Selected.Value)
+            OnSelect: |
+                =ClearCollect(syncFilter, Filter(seg_Telas_DEV, critica = ComboBoxCritica.Selected.Value))
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -171,7 +172,8 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Centro"
             Items: =Distinct(seg_Telas_DEV, Centro)
             OnChange: =Set(FiltroCentro,ComboBoxCentro.Selected.Value)
-            OnSelect: =Set(FiltroCentro,ComboBoxCentro.Selected.Value)
+            OnSelect: |
+                =ClearCollect(syncFilterCentro, Filter(syncFilter, Centro = ComboBoxCentro.Selected.Value))
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -343,7 +345,8 @@ Screen1 As screen:
             IsSearchable: =false
             Items: =Distinct(seg_Telas_DEV, Dias_Armado)
             OnChange: =
-            OnSelect: =
+            OnSelect: |
+                =ClearCollect(syncFilterCentro, Filter(syncFilter, Dias_Armado = ComboBoxDiasArmado.Selected.Value))
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]

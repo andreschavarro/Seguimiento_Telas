@@ -928,10 +928,11 @@ Screen1 As screen:
                     ZIndex: =1
 
             ComboBox1 As combobox:
-                IsSearchable: =false
+                DisplayFields: =["Value"]
                 Items: =Distinct(seg_Telas_DEV, observaciones)
                 OnSelect: =Select(Parent)
-                SearchItems: =[]
+                SearchFields: =["Value"]
+                SearchItems: =Search(Distinct(seg_Telas_DEV, observaciones),ComboBox1.SearchText,"Value")
                 Width: =205
                 X: =2266
                 Y: =22

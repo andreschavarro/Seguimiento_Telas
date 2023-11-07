@@ -1344,7 +1344,7 @@
                 },
                 "region": {
                   "charLength": 9,
-                  "charOffset": 54,
+                  "charOffset": 51,
                   "snippet": {
                     "text": "TandaTela"
                   }
@@ -1384,7 +1384,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 64,
+                  "charOffset": 61,
                   "snippet": {
                     "text": "="
                   }
@@ -1424,7 +1424,7 @@
                 },
                 "region": {
                   "charLength": 9,
-                  "charOffset": 54,
+                  "charOffset": 51,
                   "snippet": {
                     "text": "TandaTela"
                   }
@@ -1464,7 +1464,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 64,
+                  "charOffset": 61,
                   "snippet": {
                     "text": "="
                   }

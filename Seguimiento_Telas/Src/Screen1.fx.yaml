@@ -357,7 +357,39 @@ Screen1 As screen:
                         critica in ComboBoxCritica.SelectedItems
                     );
                     Obs_Pdp_Tintoreria
-                )*/
+                )
+                If(
+                    !IsBlank(ComboBoxOp.Selected.Value),
+                    Distinct(
+                        Filter(
+                            seg_Telas_DEV;
+                            OP in ComboBoxOp.SelectedItems;
+                            Grupo in ComboBoxGrupo.SelectedItems;
+                            Ref_Tela in ComboBoxRef_Tela.SelectedItems;
+                            Tanda in ComboBoxTanda.SelectedItems;
+                            Ubicacion in ComboBoxUbicacion.SelectedItems;
+                            Dias_Armado in ComboBoxDiasArmado.SelectedItems;
+                            Centro in ComboBoxCentro.SelectedItems;
+                            critica in ComboBoxCritica.SelectedItems
+                        );
+                        Obs_Pdp_Tintoreria
+                    ),
+                    Distinct(
+                        Filter(
+                            seg_Telas_DEV;
+                            Grupo in ComboBoxGrupo.SelectedItems;
+                            Ref_Tela in ComboBoxRef_Tela.SelectedItems;
+                            Tanda in ComboBoxTanda.SelectedItems;
+                            Ubicacion in ComboBoxUbicacion.SelectedItems;
+                            Dias_Armado in ComboBoxDiasArmado.SelectedItems;
+                            Centro in ComboBoxCentro.SelectedItems;
+                            critica in ComboBoxCritica.SelectedItems
+                        );
+                        OP
+                    )
+                )
+                
+                */
                 Distinct(seg_Telas_DEV, Obs_Pdp_Tintoreria)
             OnChange: =Set(FiltroMaq_tintoreria,ComboBoxObs_Pdp_Tintoreria.Selected.Value)
             OnSelect: =Set(FiltroMaq_tintoreria,ComboBoxObs_Pdp_Tintoreria.Selected.Value)

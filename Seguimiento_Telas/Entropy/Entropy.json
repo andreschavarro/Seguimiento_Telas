@@ -4,7 +4,7 @@
   "ControlUniqueIds": {
     "App": 1,
     "Button1": 35,
-    "ComboBox1_1": 97,
+    "ComboBox1_1": 89,
     "ComboBoxCentro": 26,
     "ComboBoxCritica": 25,
     "ComboBoxDiasArmado": 27,
@@ -17,7 +17,7 @@
     "ComboBoxUbicacion": 28,
     "Container1": 9,
     "Container2": 86,
-    "Container3": 95,
+    "Container3": 88,
     "ContainerFiltros": 13,
     "ContainerGallery": 36,
     "contenedor_Banner": 5,
@@ -27,7 +27,7 @@
     "Icon1": 12,
     "Icon2": 8,
     "Icon3_1": 10,
-    "Icon4": 92,
+    "Icon4": 93,
     "Label1": 7,
     "Label2": 14,
     "Label2_2": 16,
@@ -85,21 +85,21 @@
     "Label7_7": 46,
     "Label7_8": 45,
     "Label7_9": 44,
-    "Label8": 90,
-    "Label9": 93,
-    "PowerBI1": 94,
+    "Label8": 91,
+    "Label9": 94,
+    "PowerBI1": 95,
     "Rectangle1": 6,
     "Rectangle2": 63,
     "Rectangle4": 62,
     "Screen1": 4,
-    "Screen2": 91,
-    "Separator1": 89,
+    "Screen2": 92,
+    "Separator1": 90,
     "TextInput1": 84,
     "TextInput1_2": 87
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/07/2023 22:50:38",
+  "HeaderLastSavedDateTimeUTC": "11/07/2023 22:52:15",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1f857f8e-199d-49a9-a982-06a77e00b75e": "\"/providers/microsoft.powerapps/apis/shared_microsoftflowforadmins/connections/c646c1fcc4c14ec2b8c1b10dbd28b6db\"",
@@ -341,13 +341,13 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.7644157,
+    "AnalysisLoadTime": 0.6288851,
     "ControlCount": {
       "button": 1,
-      "combobox": 13,
+      "combobox": 11,
       "gallery": 1,
       "galleryTemplate": 1,
-      "groupContainer": 5,
+      "groupContainer": 6,
       "icon": 4,
       "label": 59,
       "powerbi": 1,
@@ -355,7 +355,7 @@
       "screen": 2,
       "text": 2
     },
-    "DeserializationLoadTime": 2.5736309
+    "DeserializationLoadTime": 2.1133306
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

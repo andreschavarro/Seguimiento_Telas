@@ -130,28 +130,25 @@ Screen1 As screen:
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisplayFields: =["Value"]
+            DisplayFields: =["ComplianceAssetId"]
             Font: =Font.'Segoe UI'
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Ubicacion"
             IsSearchable: =false
-            Items: |
-                =Distinct(
-                    Filter(
-                        seg_Telas_DEV,
-                        (ComboBoxDiasArmado.Selected in ComboBoxDiasArmado.SelectedItems || CountRows(ComboBoxDiasArmado.SelectedItems) = 0),
-                        (ComboBoxCentro.Selected in ComboBoxCentro.SelectedItems || CountRows(ComboBoxCentro.SelectedItems) = 0),
-                        (ComboBoxCritica.Selected in ComboBoxCritica.SelectedItems || CountRows(ComboBoxCritica.SelectedItems) = 0)
-                    ),
-                    Ubicacion
+            Items: |-
+                =Filter(
+                    seg_Telas_DEV,
+                    IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems,
+                    IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems,
+                    IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems
                 )
-            OnChange: =Set(FiltroUbicacion,ComboBoxUbicacion.SelectedItems.Value)
-            OnSelect: =Set(FiltroUbicacion,ComboBoxUbicacion.SelectedItems.Value)
+            OnChange: =
+            OnSelect: =
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
-            SearchFields: =["Value"]
+            SearchFields: =["ComplianceAssetId"]
             SearchItems: =[]
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
@@ -428,16 +425,15 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Dias Armado"
             IsSearchable: =false
-            Items: |-
-                =/*Distinct(
+            Items: |
+                =Distinct(
                     Filter(
-                        seg_Telas_DEV;
-                        Centro in ComboBoxCentro.SelectedItems;
+                        seg_Telas_DEV,
+                        Centro in ComboBoxCentro.SelectedItems,
                         critica in ComboBoxCritica.SelectedItems
-                    );
+                    ),
                     Dias_Armado
-                )*/
-                Distinct(seg_Telas_DEV, Dias_Armado)
+                )
             OnChange: =
             OnSelect: |
                 =

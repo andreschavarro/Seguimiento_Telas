@@ -342,6 +342,7 @@ Screen1 As screen:
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Busca Maq_Tintoreria"
+            IsSearchable: =false
             Items: |-
                 =/*Distinct(
                     Filter(
@@ -363,22 +364,7 @@ Screen1 As screen:
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
-            SearchItems: |-
-                =Search(/*Distinct(
-                    Filter(
-                        seg_Telas_DEV;
-                        OP in ComboBoxOp.SelectedItems;
-                        Grupo in ComboBoxGrupo.SelectedItems;
-                        Ref_Tela in ComboBoxRef_Tela.SelectedItems;
-                        Tanda in ComboBoxTanda.SelectedItems;
-                        Ubicacion in ComboBoxUbicacion.SelectedItems;
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems;
-                        Centro in ComboBoxCentro.SelectedItems;
-                        critica in ComboBoxCritica.SelectedItems
-                    );
-                    Obs_Pdp_Tintoreria
-                )*/
-                Distinct(seg_Telas_DEV, Obs_Pdp_Tintoreria),ComboBoxObs_Pdp_Tintoreria.SearchText,"Value")
+            SearchItems: =[]
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
             X: =1785
@@ -741,6 +727,7 @@ Screen1 As screen:
                         )
                     )
                 OnSelect: =Select(Parent)
+                Visible: =false
                 Width: =251
                 X: =2003
                 ZIndex: =11
@@ -923,20 +910,55 @@ Screen1 As screen:
                     HoverBorderColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =RGBA(237, 237, 237, 1)
                     OnChange: =
-                    OnSelect: =Select(Parent)
+                    OnSelect: =
                     Width: =255
                     ZIndex: =1
 
-            ComboBox1 As combobox:
-                DisplayFields: =["Value"]
-                Items: =Distinct(seg_Telas_DEV, observaciones)
-                OnSelect: =Select(Parent)
-                SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(seg_Telas_DEV, observaciones),ComboBox1.SearchText,"Value")
-                Width: =205
-                X: =2266
-                Y: =22
-                ZIndex: =28
+            Container3 As groupContainer.manualLayoutContainer:
+                BorderColor: =If(ThisItem.historico_observaciones = ThisItem.observaciones, Color.Red, Color.Green)
+                BorderThickness: =2
+                Height: =46
+                Width: =247
+                X: =2235
+                Y: =16
+                ZIndex: =29
+
+                ComboBox1_1 As combobox:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DisplayFields: =["Value"]
+                    InputTextPlaceholder: =LookUp(seg_Telas_DEV, TandaTela = ThisItem.TandaTela).observaciones
+                    Items: =Distinct(seg_Telas_DEV, observaciones)
+                    OnChange: |-
+                        =ForAll(
+                            Filter(
+                                seg_Telas_DEV,
+                                TandaTela = ThisItem.TandaTela
+                            ),
+                            Patch(
+                                seg_Telas_DEV,
+                                    ThisRecord,
+                                {observaciones: TextInput1.Text}
+                            )
+                        )
+                    OnSelect: |-
+                        =ForAll(
+                            Filter(
+                                seg_Telas_DEV,
+                                TandaTela = ThisItem.TandaTela
+                            ),
+                            Patch(
+                                seg_Telas_DEV,
+                                    ThisRecord,
+                                {observaciones: TextInput1.Text}
+                            )
+                        )
+                    SearchFields: =["Value"]
+                    SearchItems: =Search(Distinct(seg_Telas_DEV, observaciones),ComboBox1_1.SearchText,"Value")
+                    SelectionFill: =RGBA(50, 86, 160, 1)
+                    Width: =243
+                    X: =3
+                    Y: =3
+                    ZIndex: =1
 
         Label7 As label:
             Align: =Align.Center

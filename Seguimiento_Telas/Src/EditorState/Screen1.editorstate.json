@@ -3627,14 +3627,7 @@
         "FocusedBorderThickness",
         "Size",
         "SelectMultiple",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "false",
-          "InvariantPropertyName": "IsSearchable",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "IsSearchable",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,

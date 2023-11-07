@@ -15,6 +15,7 @@
     "ComboBoxTanda": 29,
     "ComboBoxUbicacion": 28,
     "Container1": 9,
+    "Container2": 93,
     "ContainerFiltros": 13,
     "ContainerGallery": 36,
     "contenedor_Banner": 5,
@@ -52,7 +53,6 @@
     "Label6_2": 64,
     "Label6_21": 79,
     "Label6_24": 82,
-    "Label6_25": 84,
     "Label6_3": 65,
     "Label6_4": 66,
     "Label6_5": 67,
@@ -91,11 +91,12 @@
     "Screen1": 4,
     "Screen2": 88,
     "Separator1": 86,
-    "TextInput1": 85
+    "TextInput1": 85,
+    "TextInput1_2": 94
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/07/2023 14:36:24",
+  "HeaderLastSavedDateTimeUTC": "11/07/2023 20:13:43",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1f857f8e-199d-49a9-a982-06a77e00b75e": "\"/providers/microsoft.powerapps/apis/shared_microsoftflowforadmins/connections/c646c1fcc4c14ec2b8c1b10dbd28b6db\"",
@@ -151,6 +152,7 @@
     "ComboBoxTanda": {},
     "ComboBoxUbicacion": {},
     "Container1": {},
+    "Container2": {},
     "ContainerFiltros": {},
     "ContainerGallery": {},
     "contenedor_Banner": {},
@@ -188,7 +190,6 @@
     "Label6_2": {},
     "Label6_21": {},
     "Label6_24": {},
-    "Label6_25": {},
     "Label6_3": {},
     "Label6_4": {},
     "Label6_5": {},
@@ -227,7 +228,8 @@
     "Screen1": {},
     "Screen2": {},
     "Separator1": {},
-    "TextInput1": {}
+    "TextInput1": {},
+    "TextInput1_2": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
@@ -245,16 +247,17 @@
     "ComboBoxTanda": 24,
     "ComboBoxUbicacion": 23,
     "Container1": 4,
+    "Container2": 80,
     "ContainerFiltros": 8,
     "ContainerGallery": 31,
     "contenedor_Banner": 0,
     "Gallery1": 55,
-    "galleryTemplate1": 78,
+    "galleryTemplate1": 56,
     "Host": 0,
     "Icon1": 7,
     "Icon2": 3,
     "Icon3_1": 5,
-    "Icon4": 83,
+    "Icon4": 85,
     "Label1": 2,
     "Label2": 9,
     "Label2_2": 11,
@@ -268,7 +271,7 @@
     "Label4": 13,
     "Label4_1": 12,
     "Label5_1": 6,
-    "Label6": 57,
+    "Label6": 78,
     "Label6_1": 58,
     "Label6_10": 66,
     "Label6_11": 65,
@@ -282,7 +285,6 @@
     "Label6_2": 59,
     "Label6_21": 74,
     "Label6_24": 77,
-    "Label6_25": 79,
     "Label6_3": 60,
     "Label6_4": 61,
     "Label6_5": 62,
@@ -313,15 +315,16 @@
     "Label7_7": 41,
     "Label7_8": 40,
     "Label7_9": 39,
-    "Label8": 82,
-    "Label9": 84,
-    "PowerBI1": 85,
+    "Label8": 84,
+    "Label9": 86,
+    "PowerBI1": 87,
     "Rectangle1": 1,
-    "Rectangle2": 56,
+    "Rectangle2": 57,
     "Screen1": 0,
     "Screen2": 0,
-    "Separator1": 81,
-    "TextInput1": 80
+    "Separator1": 83,
+    "TextInput1": 82,
+    "TextInput1_2": 81
   },
   "ResourcesJsonIndices": {
     "Image-SampleImage": 0
@@ -329,7 +332,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.667467,
+    "AnalysisLoadTime": 0.6177438,
     "ControlCount": {
       "button": 1,
       "combobox": 10,
@@ -339,11 +342,11 @@
       "icon": 4,
       "label": 60,
       "powerbi": 1,
-      "rectangle": 3,
+      "rectangle": 4,
       "screen": 2,
-      "text": 1
+      "text": 3
     },
-    "DeserializationLoadTime": 1.8689194
+    "DeserializationLoadTime": 2.5124266
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

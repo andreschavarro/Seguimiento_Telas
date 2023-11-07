@@ -510,7 +510,7 @@ Screen1 As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            InputTextPlaceholder: ="Buscar Critica"
+            InputTextPlaceholder: ="Buscar Ref Tela"
             Items: |-
                 =/*Distinct(
                     Filter(
@@ -561,8 +561,8 @@ Screen1 As screen:
             FontWeight: =FontWeight.Bold
             Size: =14
             Text: ="Observacion no revisada"
-            Width: =265
-            X: =2210
+            Width: =251
+            X: =2248
             Y: =22
             ZIndex: =32
 
@@ -574,7 +574,7 @@ Screen1 As screen:
                 =If(FiltrarPorHistorico, UpdateContext({FiltrarPorHistorico: false}), UpdateContext({FiltrarPorHistorico: true}));
                 UpdateContext({BotonPresionado: !BotonPresionado})
             Text: ="Botón"
-            X: =2275
+            X: =2288
             Y: =68
             ZIndex: =33
 
@@ -635,7 +635,7 @@ Screen1 As screen:
 
             Rectangle2 As rectangle:
                 Fill: =RGBA(128, 128, 128, 1)
-                Height: =Parent.TemplateHeight - Separator1.Height
+                Height: =86
                 OnSelect: =Select(Parent)
                 Visible: =ThisItem.IsSelected
                 Width: =4
@@ -648,6 +648,7 @@ Screen1 As screen:
                 Size: =12
                 Text: =ThisItem.critica
                 Width: =140
+                Y: =8
                 ZIndex: =7
 
             Label6_1 As label:
@@ -729,8 +730,8 @@ Screen1 As screen:
                         )
                     )
                 OnSelect: =Select(Parent)
-                Width: =228
-                X: =2239
+                Width: =251
+                X: =2231
                 Y: =16
                 ZIndex: =14
 
@@ -765,6 +766,12 @@ Screen1 As screen:
 
             Label6_10 As label:
                 Align: =Align.Center
+                Fill: |
+                    =If(
+                        ThisItem.Total = Max(Filter(seg_Telas_DEV, Tanda = ThisItem.Tanda),Total),
+                        Color.CadetBlue,
+                        Color.Transparent
+                    )
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =12
@@ -885,19 +892,32 @@ Screen1 As screen:
                 Y: =78
                 ZIndex: =33
 
-            Label6_25 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 1)
+            Container2 As groupContainer.manualLayoutContainer:
                 BorderThickness: =1
-                FocusedBorderThickness: =5
-                Height: =56
-                OnSelect: =Select(Parent)
-                Size: =12
-                Text: =LookUp(seg_Telas_DEV, TandaTela = ThisItem.TandaTela).historico_observaciones
-                Width: =232
-                X: =1961
-                Y: =14
-                ZIndex: =35
+                Height: =46
+                RadiusBottomLeft: =7
+                RadiusBottomRight: =7
+                RadiusTopLeft: =7
+                RadiusTopRight: =7
+                Width: =255
+                X: =1957
+                Y: =16
+                ZIndex: =37
+
+                TextInput1_2 As text:
+                    BorderColor: =
+                    BorderThickness: =1
+                    Default: =LookUp(seg_Telas_DEV, TandaTela = ThisItem.TandaTela).historico_observaciones
+                    DisplayMode: =DisplayMode.View
+                    FontWeight: =FontWeight.Semibold
+                    Height: =46
+                    HintText: ="Observacion "
+                    HoverBorderColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(237, 237, 237, 1)
+                    OnChange: =
+                    OnSelect: =Select(Parent)
+                    Width: =255
+                    ZIndex: =1
 
         Label7 As label:
             Align: =Align.Center

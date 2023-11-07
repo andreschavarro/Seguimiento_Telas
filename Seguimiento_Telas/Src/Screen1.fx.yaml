@@ -22,7 +22,7 @@ Screen1 As screen:
             Size: =20
             Text: ="Seguimiento Telas"
             Width: =313
-            X: =914
+            X: =1082
             Y: =15
             ZIndex: =2
 
@@ -67,16 +67,17 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Tanda"
             IsSearchable: =false
             Items: |-
-                =Distinct(
+                =/*Distinct(
                     Filter(
-                        seg_Telas_DEV,
-                        Ubicacion in ComboBoxUbicacion.SelectedItems,
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems,
-                        Centro in ComboBoxCentro.SelectedItems,
+                        seg_Telas_DEV;
+                        Ubicacion in ComboBoxUbicacion.SelectedItems;
+                        Dias_Armado in ComboBoxDiasArmado.SelectedItems;
+                        Centro in ComboBoxCentro.SelectedItems;
                         critica in ComboBoxCritica.SelectedItems
-                    ),
+                    );
                     Tanda
-                )
+                )*/
+                Distinct(seg_Telas_DEV, Tanda)
             OnChange: =Set(FiltroTanda,ComboBoxTanda.Selected.Value)
             OnSelect: =Set(FiltroTanda,ComboBoxTanda.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -136,13 +137,13 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Ubicacion"
             IsSearchable: =false
-            Items: |-
+            Items: |
                 =Distinct(
                     Filter(
                         seg_Telas_DEV,
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems,
-                        Centro in ComboBoxCentro.SelectedItems,
-                        critica in ComboBoxCritica.SelectedItems
+                        (ComboBoxDiasArmado.Selected in ComboBoxDiasArmado.SelectedItems || CountRows(ComboBoxDiasArmado.SelectedItems) = 0),
+                        (ComboBoxCentro.Selected in ComboBoxCentro.SelectedItems || CountRows(ComboBoxCentro.SelectedItems) = 0),
+                        (ComboBoxCritica.Selected in ComboBoxCritica.SelectedItems || CountRows(ComboBoxCritica.SelectedItems) = 0)
                     ),
                     Ubicacion
                 )
@@ -192,7 +193,7 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Centro"
             IsSearchable: =false
-            Items: =Distinct(Filter(seg_Telas_DEV, critica in ComboBoxCritica.SelectedItems),Centro)
+            Items: =Distinct(seg_Telas_DEV, Centro)
             OnChange: =Set(FiltroCentro,ComboBoxCentro.Selected.Value)
             OnSelect: |
                 =ClearCollect(syncFilterCentro, Filter(syncFilter, Centro = ComboBoxCentro.Selected.Value))
@@ -235,19 +236,20 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar OP"
             IsSearchable: =false
             Items: |-
-                =Distinct(
+                =/*Distinct(
                     Filter(
-                        seg_Telas_DEV,
-                        Grupo in ComboBoxGrupo.SelectedItems,
-                        Ref_Tela in ComboBoxRef_Tela.SelectedItems,
-                        Tanda in ComboBoxTanda.SelectedItems,
-                        Ubicacion in ComboBoxUbicacion.SelectedItems,
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems,
-                        Centro in ComboBoxCentro.SelectedItems,
+                        seg_Telas_DEV;
+                        Grupo in ComboBoxGrupo.SelectedItems;
+                        Ref_Tela in ComboBoxRef_Tela.SelectedItems;
+                        Tanda in ComboBoxTanda.SelectedItems;
+                        Ubicacion in ComboBoxUbicacion.SelectedItems;
+                        Dias_Armado in ComboBoxDiasArmado.SelectedItems;
+                        Centro in ComboBoxCentro.SelectedItems;
                         critica in ComboBoxCritica.SelectedItems
-                    ),
+                    );
                     OP
-                )
+                )*/
+                Distinct(seg_Telas_DEV, OP)
             OnChange: =Set(FiltroOP, ComboBoxOp.Selected.Value)
             OnSelect: =Set(FiltroOP, ComboBoxOp.Selected.Value)
             SearchFields: =["Value"]
@@ -278,18 +280,19 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Grupo"
             IsSearchable: =false
             Items: |-
-                =Distinct(
+                =/*Distinct(
                     Filter(
-                        seg_Telas_DEV,
-                        Ref_Tela in ComboBoxRef_Tela.SelectedItems,
-                        Tanda in ComboBoxTanda.SelectedItems,
-                        Ubicacion in ComboBoxUbicacion.SelectedItems,
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems,
-                        Centro in ComboBoxCentro.SelectedItems,
+                        seg_Telas_DEV;
+                        Ref_Tela in ComboBoxRef_Tela.SelectedItems;
+                        Tanda in ComboBoxTanda.SelectedItems;
+                        Ubicacion in ComboBoxUbicacion.SelectedItems;
+                        Dias_Armado in ComboBoxDiasArmado.SelectedItems;
+                        Centro in ComboBoxCentro.SelectedItems;
                         critica in ComboBoxCritica.SelectedItems
-                    ),
+                    );
                     Grupo
-                )
+                )*/
+                Distinct(seg_Telas_DEV, Grupo)
             OnChange: =Set(FiltroGrupo, ComboBoxGrupo.Selected.Value)
             OnSelect: =Set(FiltroGrupo, ComboBoxGrupo.Selected.Value)
             SearchFields: =["Value"]
@@ -317,20 +320,21 @@ Screen1 As screen:
             InputTextPlaceholder: ="Busca Maq_Tintoreria"
             IsSearchable: =false
             Items: |-
-                =Distinct(
+                =/*Distinct(
                     Filter(
-                        seg_Telas_DEV,
-                        OP in ComboBoxOp.SelectedItems,
-                        Grupo in ComboBoxGrupo.SelectedItems,
-                        Ref_Tela in ComboBoxRef_Tela.SelectedItems,
-                        Tanda in ComboBoxTanda.SelectedItems,
-                        Ubicacion in ComboBoxUbicacion.SelectedItems,
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems,
-                        Centro in ComboBoxCentro.SelectedItems,
+                        seg_Telas_DEV;
+                        OP in ComboBoxOp.SelectedItems;
+                        Grupo in ComboBoxGrupo.SelectedItems;
+                        Ref_Tela in ComboBoxRef_Tela.SelectedItems;
+                        Tanda in ComboBoxTanda.SelectedItems;
+                        Ubicacion in ComboBoxUbicacion.SelectedItems;
+                        Dias_Armado in ComboBoxDiasArmado.SelectedItems;
+                        Centro in ComboBoxCentro.SelectedItems;
                         critica in ComboBoxCritica.SelectedItems
-                    ),
+                    );
                     Obs_Pdp_Tintoreria
-                )
+                )*/
+                Distinct(seg_Telas_DEV, Obs_Pdp_Tintoreria)
             OnChange: =Set(FiltroMaq_tintoreria,ComboBoxObs_Pdp_Tintoreria.Selected.Value)
             OnSelect: =Set(FiltroMaq_tintoreria,ComboBoxObs_Pdp_Tintoreria.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -379,21 +383,22 @@ Screen1 As screen:
             InputTextPlaceholder: ="Busca Observacion"
             IsSearchable: =false
             Items: |-
-                =Distinct(
+                =/*Distinct(
                     Filter(
-                        seg_Telas_DEV,
-                        Obs_Pdp_Tintoreria in ComboBoxObs_Pdp_Tintoreria.SelectedItems,
-                        OP in ComboBoxOp.SelectedItems,
-                        Grupo in ComboBoxGrupo.SelectedItems,
-                        Ref_Tela in ComboBoxRef_Tela.SelectedItems,
-                        Tanda in ComboBoxTanda.SelectedItems,
-                        Ubicacion in ComboBoxUbicacion.SelectedItems,
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems,
-                        Centro in ComboBoxCentro.SelectedItems,
+                        seg_Telas_DEV;
+                        Obs_Pdp_Tintoreria in ComboBoxObs_Pdp_Tintoreria.SelectedItems;
+                        OP in ComboBoxOp.SelectedItems;
+                        Grupo in ComboBoxGrupo.SelectedItems;
+                        Ref_Tela in ComboBoxRef_Tela.SelectedItems;
+                        Tanda in ComboBoxTanda.SelectedItems;
+                        Ubicacion in ComboBoxUbicacion.SelectedItems;
+                        Dias_Armado in ComboBoxDiasArmado.SelectedItems;
+                        Centro in ComboBoxCentro.SelectedItems;
                         critica in ComboBoxCritica.SelectedItems
-                    ),
+                    );
                     observaciones
-                )
+                )*/
+                Distinct(seg_Telas_DEV, observaciones)
             OnChange: =
             OnSelect: =
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -424,14 +429,15 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Dias Armado"
             IsSearchable: =false
             Items: |-
-                =Distinct(
+                =/*Distinct(
                     Filter(
-                        seg_Telas_DEV,
-                        Centro in ComboBoxCentro.SelectedItems,
+                        seg_Telas_DEV;
+                        Centro in ComboBoxCentro.SelectedItems;
                         critica in ComboBoxCritica.SelectedItems
-                    ),
+                    );
                     Dias_Armado
-                )
+                )*/
+                Distinct(seg_Telas_DEV, Dias_Armado)
             OnChange: =
             OnSelect: |
                 =
@@ -463,17 +469,18 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Critica"
             IsSearchable: =false
             Items: |-
-                =Distinct(
+                =/*Distinct(
                     Filter(
-                        seg_Telas_DEV,
-                        Tanda in ComboBoxTanda.SelectedItems,
-                        Ubicacion in ComboBoxUbicacion.SelectedItems,
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems,
-                        Centro in ComboBoxCentro.SelectedItems,
+                        seg_Telas_DEV;
+                        Tanda in ComboBoxTanda.SelectedItems;
+                        Ubicacion in ComboBoxUbicacion.SelectedItems;
+                        Dias_Armado in ComboBoxDiasArmado.SelectedItems;
+                        Centro in ComboBoxCentro.SelectedItems;
                         critica in ComboBoxCritica.SelectedItems
-                    ),
+                    );
                     Ref_Tela
-                )
+                )*/
+                Distinct(seg_Telas_DEV, Ref_Tela)
             OnChange: =Set(FiltroCritica,ComboBoxRef_Tela.Selected.Value)
             OnSelect: =Set(FiltroCritica,ComboBoxRef_Tela.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -531,6 +538,7 @@ Screen1 As screen:
                         seg_Telas_DEV,
                         (IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems) &&
                         (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&
+                        (IsBlank(ComboBoxGrupo.SelectedItems) || Grupo in ComboBoxGrupo.SelectedItems) &&
                         (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
                         (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
                         (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
@@ -543,7 +551,8 @@ Screen1 As screen:
                     Filter(
                         seg_Telas_DEV,
                         (IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems) &&
-                        (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&
+                        (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&   
+                        (IsBlank(ComboBoxGrupo.SelectedItems) || Grupo in ComboBoxGrupo.SelectedItems) &&
                         (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
                         (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
                         (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
@@ -780,35 +789,15 @@ Screen1 As screen:
                 X: =1820
                 ZIndex: =25
 
-            Label6_18 As label:
-                Align: =Align.Center
-                Height: =70
-                OnSelect: =Select(Parent)
-                Size: =12
-                Text: =ThisItem.Reposo_Corte
-                Width: =68
-                X: =1752
-                ZIndex: =26
-
             Label6_19 As label:
                 Align: =Align.Center
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =12
                 Text: =ThisItem.Co_Referencia
-                Width: =68
+                Width: =125
                 X: =1684
                 ZIndex: =27
-
-            Label6_20 As label:
-                Align: =Align.Center
-                Height: =70
-                OnSelect: =Select(Parent)
-                Size: =12
-                Text: =ThisItem.Pedido
-                Width: =64
-                X: =1620
-                ZIndex: =28
 
             Label6_21 As label:
                 Align: =Align.Center
@@ -816,7 +805,7 @@ Screen1 As screen:
                 OnSelect: =Select(Parent)
                 Size: =12
                 Text: =ThisItem.co_linea
-                Width: =56
+                Width: =102
                 X: =1564
                 ZIndex: =29
 
@@ -1079,20 +1068,6 @@ Screen1 As screen:
             X: =1398
             ZIndex: =17
 
-        Label7_16 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(255, 255, 255, 1)
-            BorderThickness: =1
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 0, 0, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =63
-            Size: =12
-            Text: ="Reposo Corte"
-            Width: =68
-            X: =1751
-            ZIndex: =18
-
         Label7_17 As label:
             Align: =Align.Center
             BorderColor: =RGBA(255, 255, 255, 1)
@@ -1103,23 +1078,9 @@ Screen1 As screen:
             Height: =63
             Size: =12
             Text: ="Co Referencia"
-            Width: =65
-            X: =1686
+            Width: =139
+            X: =1664
             ZIndex: =19
-
-        Label7_18 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(255, 255, 255, 1)
-            BorderThickness: =1
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 0, 0, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =63
-            Size: =12
-            Text: ="Pedido"
-            Width: =66
-            X: =1620
-            ZIndex: =20
 
         Label7_19 As label:
             Align: =Align.Center
@@ -1131,7 +1092,7 @@ Screen1 As screen:
             Height: =63
             Size: =12
             Text: ="Co Linea"
-            Width: =58
+            Width: =102
             X: =1562
             ZIndex: =21
 
@@ -1187,8 +1148,8 @@ Screen1 As screen:
             Height: =63
             Size: =12
             Text: ="T Pieza"
-            Width: =53
-            X: =1819
+            Width: =69
+            X: =1803
             ZIndex: =25
 
         Label7_24 As label:

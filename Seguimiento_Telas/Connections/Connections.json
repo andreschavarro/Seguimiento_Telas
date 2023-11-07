@@ -1,5 +1,19 @@
 {
-  "06008da1-f1cc-47ec-9918-9d2ccc570142": {
+  "1f857f8e-199d-49a9-a982-06a77e00b75e": {
+    "connectionRef": {
+      "displayName": "Power Automate para administradores",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/microsoftflowforadmins/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_microsoftflowforadmins"
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAutomateparaadministradores"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "1f857f8e-199d-49a9-a982-06a77e00b75e"
+  },
+  "3e914216-eb1d-473a-8427-27343e2014d4": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -23,21 +37,7 @@
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "06008da1-f1cc-47ec-9918-9d2ccc570142"
-  },
-  "1f857f8e-199d-49a9-a982-06a77e00b75e": {
-    "connectionRef": {
-      "displayName": "Power Automate para administradores",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/microsoftflowforadmins/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_microsoftflowforadmins"
-    },
-    "datasets": {},
-    "dataSources": [
-      "PowerAutomateparaadministradores"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "1f857f8e-199d-49a9-a982-06a77e00b75e"
+    "id": "3e914216-eb1d-473a-8427-27343e2014d4"
   },
   "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": {
     "connectionRef": {

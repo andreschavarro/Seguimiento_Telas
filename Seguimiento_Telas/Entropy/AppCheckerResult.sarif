@@ -14,366 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxCentro.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxCentro.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxCentro"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxDiasArmado.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxDiasArmado.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 60,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxDiasArmado"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxUbicacion.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxUbicacion.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 65,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxUbicacion"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxTanda.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxTanda.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 63,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxTanda"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxRef_Tela.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxRef_Tela.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 59,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxRef_Tela"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxGrupo.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxGrupo.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 62,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxGrupo"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxOp.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxOp.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 62,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxOp"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxObs_Pdp_Tintoreria.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxObs_Pdp_Tintoreria.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 59,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxObs_Pdp_Tintoreria"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxObservaciones.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.ContainerFiltros.ComboBoxObservaciones.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 75,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Screen1",
-                "type": "Screen1.ContainerFiltros.ComboBoxObservaciones"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen1.ContainerGallery.Gallery1.Items"
                 }
               ],
@@ -544,7 +184,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 347,
+                  "charOffset": 335,
                   "snippet": {
                     "text": "&&"
                   }
@@ -624,7 +264,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 543,
+                  "charOffset": 527,
                   "snippet": {
                     "text": "&&"
                   }
@@ -664,7 +304,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 657,
+                  "charOffset": 633,
                   "snippet": {
                     "text": "&&"
                   }
@@ -704,7 +344,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 756,
+                  "charOffset": 747,
                   "snippet": {
                     "text": "&&"
                   }
@@ -744,7 +384,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 885,
+                  "charOffset": 846,
                   "snippet": {
                     "text": "&&"
                   }
@@ -784,7 +424,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 966,
+                  "charOffset": 975,
                   "snippet": {
                     "text": "&&"
                   }
@@ -824,7 +464,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1020,
+                  "charOffset": 1056,
                   "snippet": {
                     "text": "&&"
                   }
@@ -864,7 +504,47 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1158,
+                  "charOffset": 1110,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Screen1",
+                "type": "Screen1.ContainerGallery.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.ContainerGallery.Gallery1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.ContainerGallery.Gallery1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 1248,
                   "snippet": {
                     "text": "in"
                   }
@@ -904,7 +584,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1147,
+                  "charOffset": 1237,
                   "snippet": {
                     "text": "||"
                   }
@@ -944,7 +624,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1192,
+                  "charOffset": 1282,
                   "snippet": {
                     "text": "&&"
                   }
@@ -984,7 +664,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1285,
+                  "charOffset": 1375,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1024,7 +704,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1387,
+                  "charOffset": 1468,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1064,7 +744,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1477,
+                  "charOffset": 1570,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1104,7 +784,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1583,
+                  "charOffset": 1660,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1144,7 +824,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1697,
+                  "charOffset": 1766,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1184,7 +864,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1796,
+                  "charOffset": 1880,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1224,7 +904,47 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1925,
+                  "charOffset": 1979,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Screen1",
+                "type": "Screen1.ContainerGallery.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen1.ContainerGallery.Gallery1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen1.ContainerGallery.Gallery1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 2108,
                   "snippet": {
                     "text": "&&"
                   }

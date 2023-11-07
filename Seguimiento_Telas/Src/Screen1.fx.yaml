@@ -626,20 +626,24 @@ Screen1 As screen:
             Y: =63
             ZIndex: =1
 
+            Rectangle4 As rectangle:
+                Fill: |-
+                    =If(
+                        ThisItem.Total = Max(Filter(seg_Telas_DEV, Tanda = ThisItem.Tanda),Total),
+                        ColorValue("#cac4b0"),
+                        Color.Transparent
+                    )
+                Height: =78
+                OnSelect: =Select(Parent)
+                Width: =2500
+                ZIndex: =1
+
             Separator1 As rectangle:
                 Height: =8
                 OnSelect: =Select(Parent)
                 Width: =Parent.TemplateWidth
                 Y: =Parent.TemplateHeight - Self.Height
-                ZIndex: =5
-
-            Rectangle2 As rectangle:
-                Fill: =RGBA(128, 128, 128, 1)
-                Height: =86
-                OnSelect: =Select(Parent)
-                Visible: =ThisItem.IsSelected
-                Width: =4
-                ZIndex: =6
+                ZIndex: =2
 
             Label6 As label:
                 Align: =Align.Center
@@ -649,7 +653,15 @@ Screen1 As screen:
                 Text: =ThisItem.critica
                 Width: =140
                 Y: =8
-                ZIndex: =7
+                ZIndex: =3
+
+            Rectangle2 As rectangle:
+                Fill: =RGBA(128, 128, 128, 1)
+                Height: =86
+                OnSelect: =Select(Parent)
+                Visible: =ThisItem.IsSelected
+                Width: =4
+                ZIndex: =4
 
             Label6_1 As label:
                 Align: =Align.Center
@@ -659,7 +671,7 @@ Screen1 As screen:
                 Text: =ThisItem.Centro
                 Width: =69
                 X: =140
-                ZIndex: =8
+                ZIndex: =5
 
             Label6_2 As label:
                 Align: =Align.Center
@@ -668,7 +680,7 @@ Screen1 As screen:
                 Text: =ThisItem.Tipo_orden
                 Width: =69
                 X: =209
-                ZIndex: =9
+                ZIndex: =6
 
             Label6_3 As label:
                 Align: =Align.Center
@@ -677,7 +689,7 @@ Screen1 As screen:
                 Text: =ThisItem. referencia
                 Width: =181
                 X: =281
-                ZIndex: =10
+                ZIndex: =7
 
             Label6_4 As label:
                 Align: =Align.Center
@@ -687,7 +699,7 @@ Screen1 As screen:
                 Text: =ThisItem.Dias_Armado
                 Width: =70
                 X: =462
-                ZIndex: =11
+                ZIndex: =8
 
             Label6_5 As label:
                 Align: =Align.Center
@@ -697,7 +709,7 @@ Screen1 As screen:
                 Text: =ThisItem.Dias_centro
                 Width: =67
                 X: =532
-                ZIndex: =12
+                ZIndex: =9
 
             Label6_6 As label:
                 Align: =Align.Center
@@ -707,11 +719,10 @@ Screen1 As screen:
                 Text: =ThisItem.Dias_Ubicacion
                 Width: =90
                 X: =599
-                ZIndex: =13
+                ZIndex: =10
 
             TextInput1 As text:
                 BorderColor: =If(ThisItem.historico_observaciones = ThisItem.observaciones, Color.Red, Color.Green)
-                BorderThickness: =1
                 Default: =LookUp(seg_Telas_DEV, TandaTela = ThisItem.TandaTela).observaciones
                 Height: =46
                 HintText: ="Ingrese su Observacion"
@@ -731,9 +742,8 @@ Screen1 As screen:
                     )
                 OnSelect: =Select(Parent)
                 Width: =251
-                X: =2231
-                Y: =16
-                ZIndex: =14
+                X: =2003
+                ZIndex: =11
 
             Label6_7 As label:
                 Align: =Align.Center
@@ -743,7 +753,7 @@ Screen1 As screen:
                 Text: =ThisItem.Grupo
                 Width: =73
                 X: =689
-                ZIndex: =15
+                ZIndex: =12
 
             Label6_8 As label:
                 Height: =70
@@ -752,7 +762,7 @@ Screen1 As screen:
                 Text: =ThisItem.Descripcion_Tela
                 Width: =182
                 X: =959
-                ZIndex: =16
+                ZIndex: =13
 
             Label6_9 As label:
                 Align: =Align.Center
@@ -762,23 +772,21 @@ Screen1 As screen:
                 Text: =ThisItem.Color
                 Width: =70
                 X: =889
-                ZIndex: =17
+                ZIndex: =14
 
             Label6_10 As label:
                 Align: =Align.Center
-                Fill: |
-                    =If(
-                        ThisItem.Total = Max(Filter(seg_Telas_DEV, Tanda = ThisItem.Tanda),Total),
-                        Color.CadetBlue,
-                        Color.Transparent
-                    )
+                Fill: |+
+                    =RGBA(0, 0, 0, 0)
+                    
+                    
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =12
                 Text: =ThisItem.Tanda
                 Width: =66
                 X: =823
-                ZIndex: =18
+                ZIndex: =15
 
             Label6_11 As label:
                 Align: =Align.Center
@@ -788,7 +796,7 @@ Screen1 As screen:
                 Text: =ThisItem.OP
                 Width: =61
                 X: =762
-                ZIndex: =19
+                ZIndex: =16
 
             Label6_12 As label:
                 Align: =Align.Center
@@ -798,7 +806,7 @@ Screen1 As screen:
                 Text: =ThisItem.Ubicacion
                 Width: =108
                 X: =1141
-                ZIndex: =20
+                ZIndex: =17
 
             Label6_13 As label:
                 Align: =Align.Center
@@ -808,7 +816,7 @@ Screen1 As screen:
                 Text: =ThisItem.Obs_Pdp_Tintoreria
                 Width: =98
                 X: =1466
-                ZIndex: =21
+                ZIndex: =18
 
             Label6_14 As label:
                 Align: =Align.Center
@@ -819,7 +827,7 @@ Screen1 As screen:
                 Text: =ThisItem.Ref_Tela
                 Width: =68
                 X: =1398
-                ZIndex: =22
+                ZIndex: =19
 
             Label6_15 As label:
                 Align: =Align.Center
@@ -829,7 +837,7 @@ Screen1 As screen:
                 Text: =ThisItem.Prio_Maq
                 Width: =55
                 X: =1342
-                ZIndex: =23
+                ZIndex: =20
 
             Label6_16 As label:
                 Align: =Align.Center
@@ -839,7 +847,7 @@ Screen1 As screen:
                 Text: =ThisItem.Maq_Tintoreria
                 Width: =93
                 X: =1249
-                ZIndex: =24
+                ZIndex: =21
 
             Label6_17 As label:
                 Align: =Align.Center
@@ -848,8 +856,8 @@ Screen1 As screen:
                 Size: =12
                 Text: =ThisItem.T_Pieza
                 Width: =51
-                X: =1820
-                ZIndex: =25
+                X: =1815
+                ZIndex: =22
 
             Label6_19 As label:
                 Align: =Align.Center
@@ -859,7 +867,7 @@ Screen1 As screen:
                 Text: =ThisItem.Co_Referencia
                 Width: =125
                 X: =1684
-                ZIndex: =27
+                ZIndex: =23
 
             Label6_21 As label:
                 Align: =Align.Center
@@ -869,7 +877,7 @@ Screen1 As screen:
                 Text: =ThisItem.co_linea
                 Width: =102
                 X: =1564
-                ZIndex: =29
+                ZIndex: =24
 
             Label6_24 As label:
                 Align: =Align.Center
@@ -879,7 +887,7 @@ Screen1 As screen:
                 Text: =ThisItem.Total
                 Width: =71
                 X: =1872
-                ZIndex: =32
+                ZIndex: =25
 
             Label8 As label:
                 BorderColor: =RGBA(237, 237, 237, 1)
@@ -890,7 +898,7 @@ Screen1 As screen:
                 Width: =2496
                 X: =4
                 Y: =78
-                ZIndex: =33
+                ZIndex: =26
 
             Container2 As groupContainer.manualLayoutContainer:
                 BorderThickness: =1
@@ -902,7 +910,7 @@ Screen1 As screen:
                 Width: =255
                 X: =1957
                 Y: =16
-                ZIndex: =37
+                ZIndex: =27
 
                 TextInput1_2 As text:
                     BorderColor: =
@@ -918,6 +926,16 @@ Screen1 As screen:
                     OnSelect: =Select(Parent)
                     Width: =255
                     ZIndex: =1
+
+            ComboBox1 As combobox:
+                IsSearchable: =false
+                Items: =Distinct(seg_Telas_DEV, observaciones)
+                OnSelect: =Select(Parent)
+                SearchItems: =[]
+                Width: =205
+                X: =2266
+                Y: =22
+                ZIndex: =28
 
         Label7 As label:
             Align: =Align.Center

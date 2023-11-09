@@ -77,8 +77,8 @@ Screen1 As screen:
                     Tanda
                 )*/
                 Distinct(seg_Telas_DEV, Tanda)
-            OnChange: =Set(FiltroTanda,ComboBoxTanda.Selected.Value)
-            OnSelect: =Set(FiltroTanda,ComboBoxTanda.Selected.Value)
+            OnChange: =
+            OnSelect: =Set(VariableUbicacion, ComboBoxUbicacion.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -117,9 +117,13 @@ Screen1 As screen:
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Critica"
             Items: =Distinct(seg_Telas_DEV,critica)
-            OnChange: =Set(FiltroCritica,ComboBoxCritica.Selected.Value)
-            OnSelect: |
-                =ClearCollect(syncFilter, Filter(seg_Telas_DEV, critica = ComboBoxCritica.Selected.Value))
+            OnChange: =
+            OnSelect: |-
+                =ClearCollect(
+                    critica,
+                    {
+                        criticadef: ComboBoxCritica.SelectedItems
+                    })
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -148,7 +152,7 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Ubicacion"
             Items: =Distinct(seg_Telas_DEV, Ubicacion)
             OnChange: =
-            OnSelect: =
+            OnSelect: =Set(VariableUbicacion, ComboBoxUbicacion.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -194,8 +198,7 @@ Screen1 As screen:
             InputTextPlaceholder: ="Buscar Centro"
             Items: =Distinct(seg_Telas_DEV, Centro)
             OnChange: =Set(FiltroCentro,ComboBoxCentro.Selected.Value)
-            OnSelect: |
-                =ClearCollect(syncFilterCentro, Filter(syncFilter, Centro = ComboBoxCentro.Selected.Value))
+            OnSelect: =
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -502,7 +505,7 @@ Screen1 As screen:
             Items: =Distinct(seg_Telas_DEV, Dias_Armado)
             OnChange: =
             OnSelect: |
-                =
+                =Set(VariableDiasArmado, ComboBoxDiasArmado.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
             SearchFields: =["Value"]
@@ -523,30 +526,19 @@ Screen1 As screen:
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisplayFields: =["Value"]
+            DisplayFields: =["ComplianceAssetId"]
             Font: =Font.'Segoe UI'
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
             InputTextPlaceholder: ="Buscar Ref Tela"
             IsSearchable: =false
-            Items: |-
-                =Distinct(
-                    Filter(
-                        seg_Telas_DEV,
-                        Ubicacion in ComboBoxUbicacion.SelectedItems,
-                        Dias_Armado in ComboBoxDiasArmado.SelectedItems,
-                        Tanda in ComboBoxTanda.SelectedItems,
-                        Centro in ComboBoxCentro.SelectedItems,
-                        critica in ComboBoxCritica.SelectedItems
-                    ),
-                    Ref_Tela
-                )
-            OnChange: =Set(FiltroCritica,ComboBoxRef_Tela.Selected.Value)
-            OnSelect: =Set(FiltroCritica,ComboBoxRef_Tela.Selected.Value)
+            Items: =Distinct(seg_Telas_DEV, Ref_Tela)
+            OnChange: =
+            OnSelect: =Set(VariableRefTela, ComboBoxRef_Tela.SelectedItems)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 120, 212, 1)
-            SearchFields: =["Value"]
+            SearchFields: =["ComplianceAssetId"]
             SearchItems: =[]
             SelectionFill: =RGBA(0, 120, 212, 1)
             Width: =210
@@ -749,7 +741,8 @@ Screen1 As screen:
                 OnSelect: =Select(Parent)
                 Visible: =false
                 Width: =251
-                X: =2003
+                X: =2231
+                Y: =16
                 ZIndex: =11
 
             Label6_7 As label:
@@ -945,33 +938,12 @@ Screen1 As screen:
 
                 ComboBox1_1 As combobox:
                     BorderColor: =RGBA(0, 0, 0, 0)
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
                     DisplayFields: =["Value"]
                     InputTextPlaceholder: =LookUp(seg_Telas_DEV, TandaTela = ThisItem.TandaTela).observaciones
                     Items: =Distinct(seg_Telas_DEV, observaciones)
-                    OnChange: |-
-                        =ForAll(
-                            Filter(
-                                seg_Telas_DEV,
-                                TandaTela = ThisItem.TandaTela
-                            ),
-                            Patch(
-                                seg_Telas_DEV,
-                                    ThisRecord,
-                                {observaciones: TextInput1.Text}
-                            )
-                        )
-                    OnSelect: |-
-                        =ForAll(
-                            Filter(
-                                seg_Telas_DEV,
-                                TandaTela = ThisItem.TandaTela
-                            ),
-                            Patch(
-                                seg_Telas_DEV,
-                                    ThisRecord,
-                                {observaciones: TextInput1.Text}
-                            )
-                        )
+                    OnChange: =
+                    OnSelect: =
                     SearchFields: =["Value"]
                     SearchItems: =Search(Distinct(seg_Telas_DEV, observaciones),ComboBox1_1.SearchText,"Value")
                     SelectionFill: =RGBA(50, 86, 160, 1)
@@ -1407,4 +1379,10 @@ Screen1 As screen:
             X: =12
             Y: =9
             ZIndex: =2
+
+    Label3 As label:
+        Text: =criticaprd
+        X: =190
+        Y: =70
+        ZIndex: =7
 

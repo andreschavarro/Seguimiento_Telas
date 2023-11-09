@@ -13,7 +13,29 @@
     "dependents": [],
     "id": "1f857f8e-199d-49a9-a982-06a77e00b75e"
   },
-  "3e914216-eb1d-473a-8427-27343e2014d4": {
+  "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3432/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://grupocrystal.sharepoint.com/sites/Pruebas_IN": {
+        "dataSources": {
+          "seg_Telas_DEV": {
+            "tableName": "791f71b8-c412-4696-8891-28f19bd985a1"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "seg_Telas_DEV"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "4099b8b1-3b3b-47c3-9c41-3a0d28791b13"
+  },
+  "526cda8c-a0d6-424d-a474-ce70fd89c629": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
@@ -37,29 +59,7 @@
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "3e914216-eb1d-473a-8427-27343e2014d4"
-  },
-  "4099b8b1-3b3b-47c3-9c41-3a0d28791b13": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3432/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {
-      "https://grupocrystal.sharepoint.com/sites/Pruebas_IN": {
-        "dataSources": {
-          "seg_Telas_DEV": {
-            "tableName": "791f71b8-c412-4696-8891-28f19bd985a1"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "seg_Telas_DEV"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "4099b8b1-3b3b-47c3-9c41-3a0d28791b13"
+    "id": "526cda8c-a0d6-424d-a474-ce70fd89c629"
   },
   "6627f513-7626-42b0-8b4e-c30e974b9cc5": {
     "connectionRef": {

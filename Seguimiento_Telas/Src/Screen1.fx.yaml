@@ -871,7 +871,7 @@ Screen1 As screen:
                 Height: =70
                 OnSelect: =Select(Parent)
                 Size: =12
-                Text: =ThisItem.Co_Referencia
+                Text: =ThisItem.Obs_Maq_Tintoreria
                 Width: =125
                 X: =1684
                 ZIndex: =23
@@ -1213,7 +1213,7 @@ Screen1 As screen:
             FontWeight: =FontWeight.Bold
             Height: =63
             Size: =12
-            Text: ="Co Referencia"
+            Text: ="Obs Maq Tintoreria"
             Width: =139
             X: =1664
             ZIndex: =19
@@ -1331,7 +1331,7 @@ Screen1 As screen:
                         Obs_Pdp_Tintoreria: ThisRecord.Obs_Pdp_Tintoreria,
                         co_linea: ThisRecord.co_linea,
                         Pedido: ThisRecord.Pedido,
-                        Co_Referencia: ThisRecord.Co_Referencia,
+                        Obs_Maq_Tintoreria: ThisRecord.Obs_Maq_Tintoreria,
                         Reposo_Corte: ThisRecord.Reposo_Corte,
                         T_Pieza: ThisRecord.T_Pieza,
                         Total: ThisRecord.Total,

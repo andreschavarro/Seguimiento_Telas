@@ -739,7 +739,6 @@ Screen1 As screen:
                         )
                     )
                 OnSelect: =Select(Parent)
-                Visible: =false
                 Width: =251
                 X: =2231
                 Y: =16
@@ -931,6 +930,7 @@ Screen1 As screen:
                 BorderColor: =If(ThisItem.historico_observaciones = ThisItem.observaciones, Color.Red, Color.Green)
                 BorderThickness: =2
                 Height: =46
+                Visible: =false
                 Width: =247
                 X: =2235
                 Y: =16

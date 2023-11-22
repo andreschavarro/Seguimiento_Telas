@@ -7,7 +7,8 @@ App As appinfo:
         Set(FiltroTanda;ComboBoxTandaTela.Selected.Value);;
         Set(Filtroreferencia;ComboBoxReferencia.Selected.Value);;
         Set(FiltroPrio_Maq;ComboBoxTanda.Selected.Value);;*/
-        Set(FiltrosAplicados,true)
+        Set(FiltrosAplicados,true);
+        Set(imagen2,true)
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

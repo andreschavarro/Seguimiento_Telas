@@ -585,37 +585,117 @@ Screen1 As screen:
         "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             DelayItemLoading: =true
             Height: =709
-            Items: |+
-                =If(FiltrarPorHistorico,
+            Items: |-
+                =If(
+                    FiltrarPorHistorico,
                     Filter(
                         seg_Telas_DEV,
-                        (IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems) &&
-                        (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&
-                        (IsBlank(ComboBoxGrupo.SelectedItems) || Grupo in ComboBoxGrupo.SelectedItems) &&
-                        (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
-                        (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
-                        (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
-                        (IsBlank(ComboBoxObservaciones.SelectedItems) || observaciones in ComboBoxObservaciones.SelectedItems) &&
-                        (IsBlank(ComboBoxRef_Tela.SelectedItems) || Ref_Tela in ComboBoxRef_Tela.SelectedItems) &&
-                        (IsBlank(ComboBoxObs_Pdp_Tintoreria.SelectedItems) || Obs_Pdp_Tintoreria in ComboBoxObs_Pdp_Tintoreria.SelectedItems) &&
-                        (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems) &&
-                         (historico_observaciones = observaciones) && !IsBlank(historico_observaciones)
+                        (If(
+                            CountA(ComboBoxCritica.SelectedItems) = 0 || IsBlank(ComboBoxCritica.SelectedItems),
+                            true,
+                            false
+                        ) || critica in ComboBoxCritica.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxCentro.SelectedItems) = 0 || IsBlank(ComboBoxCentro.SelectedItems),
+                            true,
+                            false
+                        ) || Centro in ComboBoxCentro.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxGrupo.SelectedItems) = 0 || IsBlank(ComboBoxGrupo.SelectedItems),
+                            true,
+                            false
+                        ) || Grupo in ComboBoxGrupo.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxUbicacion.SelectedItems) = 0 || IsBlank(ComboBoxUbicacion.SelectedItems),
+                            true,
+                            false
+                        ) || Ubicacion in ComboBoxUbicacion.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxTanda.SelectedItems) = 0 || IsBlank(ComboBoxTanda.SelectedItems),
+                            true,
+                            false
+                        ) || Tanda in ComboBoxTanda.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxDiasArmado.SelectedItems) = 0 || IsBlank(ComboBoxDiasArmado.SelectedItems),
+                            true,
+                            false
+                        ) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxObservaciones.SelectedItems) = 0 || IsBlank(ComboBoxObservaciones.SelectedItems),
+                            true,
+                            false
+                        ) || observaciones in ComboBoxObservaciones.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxRef_Tela.SelectedItems) = 0 || IsBlank(ComboBoxRef_Tela.SelectedItems),
+                            true,
+                            false
+                        ) || Ref_Tela in ComboBoxRef_Tela.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxObs_Pdp_Tintoreria.SelectedItems) = 0 || IsBlank(ComboBoxObs_Pdp_Tintoreria.SelectedItems),
+                            true,
+                            false
+                        ) || Obs_Pdp_Tintoreria in ComboBoxObs_Pdp_Tintoreria.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxOp.SelectedItems) = 0 || IsBlank(ComboBoxOp.SelectedItems),
+                            true,
+                            false
+                        ) || OP in ComboBoxOp.SelectedItems) && 
+                        (historico_observaciones = observaciones) && !IsBlank(historico_observaciones)
                     ),
                     Filter(
                         seg_Telas_DEV,
-                        (IsBlank(ComboBoxCritica.SelectedItems) || critica in ComboBoxCritica.SelectedItems) &&
-                        (IsBlank(ComboBoxCentro.SelectedItems) || Centro in ComboBoxCentro.SelectedItems) &&   
-                        (IsBlank(ComboBoxGrupo.SelectedItems) || Grupo in ComboBoxGrupo.SelectedItems) &&
-                        (IsBlank(ComboBoxUbicacion.SelectedItems) || Ubicacion in ComboBoxUbicacion.SelectedItems) &&
-                        (IsBlank(ComboBoxTanda.SelectedItems) || Tanda in ComboBoxTanda.SelectedItems) &&
-                        (IsBlank(ComboBoxDiasArmado.SelectedItems) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) &&
-                        (IsBlank(ComboBoxObservaciones.SelectedItems) || observaciones in ComboBoxObservaciones.SelectedItems) &&
-                        (IsBlank(ComboBoxRef_Tela.SelectedItems) || Ref_Tela in ComboBoxRef_Tela.SelectedItems) &&
-                        (IsBlank(ComboBoxObs_Pdp_Tintoreria.SelectedItems) || Obs_Pdp_Tintoreria in ComboBoxObs_Pdp_Tintoreria.SelectedItems) &&
-                        (IsBlank(ComboBoxOp.SelectedItems) || OP in ComboBoxOp.SelectedItems)
+                        (If(
+                            CountA(ComboBoxCritica.SelectedItems) = 0 || IsBlank(ComboBoxCritica.SelectedItems),
+                            true,
+                            false
+                        ) || critica in ComboBoxCritica.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxCentro.SelectedItems) = 0 || IsBlank(ComboBoxCentro.SelectedItems),
+                            true,
+                            false
+                        ) || Centro in ComboBoxCentro.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxGrupo.SelectedItems) = 0 || IsBlank(ComboBoxGrupo.SelectedItems),
+                            true,
+                            false
+                        ) || Grupo in ComboBoxGrupo.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxUbicacion.SelectedItems) = 0 || IsBlank(ComboBoxUbicacion.SelectedItems),
+                            true,
+                            false
+                        ) || Ubicacion in ComboBoxUbicacion.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxTanda.SelectedItems) = 0 || IsBlank(ComboBoxTanda.SelectedItems),
+                            true,
+                            false
+                        ) || Tanda in ComboBoxTanda.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxDiasArmado.SelectedItems) = 0 || IsBlank(ComboBoxDiasArmado.SelectedItems),
+                            true,
+                            false
+                        ) || Dias_Armado in ComboBoxDiasArmado.SelectedItems) && 
+                       (If(
+                            CountA(ComboBoxObservaciones.SelectedItems) = 0 || IsBlank(ComboBoxObservaciones.SelectedItems),
+                            true,
+                            false
+                        ) || observaciones in ComboBoxObservaciones.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxRef_Tela.SelectedItems) = 0 || IsBlank(ComboBoxRef_Tela.SelectedItems),
+                            true,
+                            false
+                        ) || Ref_Tela in ComboBoxRef_Tela.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxObs_Pdp_Tintoreria.SelectedItems) = 0 || IsBlank(ComboBoxObs_Pdp_Tintoreria.SelectedItems),
+                            true,
+                            false
+                        ) || Obs_Pdp_Tintoreria in           ComboBoxObs_Pdp_Tintoreria.SelectedItems) && 
+                        (If(
+                            CountA(ComboBoxOp.SelectedItems) = 0 || IsBlank(ComboBoxOp.SelectedItems),
+                            true,
+                            false
+                        ) || OP in ComboBoxOp.SelectedItems)
                     )
                 )
-                
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
